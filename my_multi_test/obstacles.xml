@@ -1,0 +1,8 @@
+<environment>
+    <object position="min 1000 400 0" orientation="0 0 0" shape="cuboid 500 100 150" 
+    material="forest" fill-color="160 228 160" opacity="0.4"/>
+    <object position="min 500 500 0" orientation="0 0 0" shape="cuboid 300 300 150" 
+    material="forest" fill-color="160 228 160" opacity="0.6"/>
+    <object position="min 1000 1000 0" orientation="0 0 0" shape="cuboid 200 600 220" 
+    material="forest" fill-color="160 228 160" opacity="0.8"/>
+</environment>

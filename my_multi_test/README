@@ -1,0 +1,4 @@
+This is the second version,only with the basic "cluster"/
+基本完成了基于ip地址划分层次化组网的，考虑到信道损失，障碍物等的较真实的模型。目前uav数最多90+
+待完成:关于簇内节点如何ping多个同簇节点 不是达不到,而是不能写循环 挨个写进去太麻烦 可以考虑也是通过python之类的生成 看看有没有对应的xml文件可以生成。
+两个版本:理想模型 multi_test_ideal(其实也不太理想) 真实模型multi_test_real

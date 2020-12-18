@@ -1,0 +1,448 @@
+file 381326 1608218313                                          
+version 2
+run General-2-20201217-23:18:16-15116
+attr configname General
+attr datetime 20201217-23:18:16
+attr experiment General
+attr inifile multi_test.ini
+attr iterationvars "$pathlosstype=\"RicianFading\""
+attr iterationvarsf pathlosstype=RicianFading-
+attr measurement "$pathlosstype=\"RicianFading\""
+attr network myuav.UAVNetwork_Multi
+attr processid 15116
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 2
+attr seedset 2
+itervar pathlosstype "\"RicianFading\""
+param *.configurator.addStaticRoutes false
+param **.arp.typename "\"GlobalArp\""
+param **.hostA[*].forwarding false
+param **.hostB[*].forwarding false
+param **.hostC[*].forwarding false
+param **.hostA[*].multicastForwarding false
+param **.hostB[*].multicastForwarding false
+param **.hostC[*].multicastForwarding false
+param **.hostRouters[*].forwarding true
+param **.hostRouters[*].multicastForwarding true
+param *.numHostsA 2
+param *.numHostsB 2
+param *.numHostsC 2
+param *.configurator.config "xmldoc(\"multi_test.xml\")"
+param *.configurator.dumpAddresses true
+param *.configurator.dumpTopology true
+param *.configurator.dumpLinks true
+param *.configurator.dumpRoutes true
+param *.configurator.dumpConfig "\"multi_test_dump.xml\""
+param *.visualizer.osgVisualizer.typename "\"IntegratedOsgVisualizer\""
+param *.visualizer.osgVisualizer.sceneVisualizer.clearColor "\"skyblue\""
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneImage "\"showcases/desert\""
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneImageSize 5000m
+param *.visualizer.osgVisualizer.sceneVisualizer.axisLength 1000m
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneMinX -2000m
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneMinY -2000m
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneMinZ 0m
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneMaxX 3000m
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneMaxY 3000m
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneMaxZ 3000m
+param *.visualizer.*.mediumVisualizer.displayCommunicationRanges true
+param *.visualizer.*.dataLinkVisualizer.displayLinks true
+param *.visualizer.*.dataLinkVisualizer.packetFilter "\"*\""
+param *.visualizer.*.networkRouteVisualizer.displayRoutes true
+param *.visualizer.*.networkRouteVisualizer.lineShift 0
+param *.visualizer.*.networkRouteVisualizer.lineWidth 10
+param *.visualizer.*.networkRouteVisualizer.packetFilter "\"ping*\""
+param *.visualizer.*.mobilityVisualizer.displayMovementTrails true
+param *.visualizer.*.mobilityVisualizer.animationSpeed 1
+param *.host*.wlan[0].typename "\"WirelessInterface\""
+param *.host*.wlan[0].mac.typename "\"CsmaCaMac\""
+param *.host*.wlan[0].mac.ackTimeout 300us
+param **.wlan[*].queue.typename "\"DropTailQueue\""
+param *.hostRouters[*].wlan[0].mac.maxQueueSize 20000
+param *.host*.wlan[0].mac.maxQueueSize 10000
+param *.radioMedium.typename "\"ApskScalarRadioMedium\""
+param *.radioMedium.backgroundNoise.power -90dBm
+param *.radioMedium.mediumLimitCache.carrierFrequency 2GHz
+param *.host*.wlan[0].radio.typename "\"ApskScalarRadio\""
+param *.host*.wlan[0].radio.carrierFrequency 2GHz
+param **.ignorePartialInterference true
+param *.hostRouters[*].wlan[0].radio.bandwidth 5MHz
+param *.host*.wlan[0].radio.bandwidth 2MHz
+param *.host*.wlan[0].radio.transmitter.preambleDuration 10us
+param *.host*.wlan[0].radio.transmitter.headerLength 8b
+param *.host*.wlan[0].radio.receiver.sensitivity -85dBm
+param *.host*.wlan[0].radio.receiver.energyDetection -85dBm
+param *.host*.wlan[0].radio.receiver.snirThreshold 4dB
+param **.host*.**.bitrate 1Mbps
+param **.host*.wlan[*].radio.transmitter.power 8mW
+param *.radioMedium.pathLoss.typename "\"RicianFading\""
+param *.physicalEnvironment.coordinateSystemModule "\"coordinateSystem\""
+param *.*.mobility.coordinateSystemModule "\"coordinateSystem\""
+param *.physicalEnvironment.config "xmldoc(\"obstacles.xml\")"
+param *.radioMedium.obstacleLoss.typename "\"DielectricObstacleLoss\""
+param *.host*.numApps 1
+param **.hostA[*].app[*].count 1
+param **.hostB[*].app[*].count 1
+param **.hostC[*].app[*].count 1
+param **.hostRouters[*].app[*].count 1
+param *.host*.app[*].continuous true
+param *.host*.app[*].typename "\"PingApp\""
+param **.hostRouters[0].app[*].destAddr "\"hostRouters[1] hostRouters[2]\""
+param **.hostRouters[1].app[*].destAddr "\"hostRouters[0] hostRouters[2]\""
+param **.hostRouters[2].app[*].destAddr "\"hostRouters[0] hostRouters[1]\""
+param **.hostRouters[*].app[*].startTime uniform(4s,5s)
+param **.hostRouters[*].app[*].printPing true
+param **.hostA[*].app[*].destAddr "\"hostRouters[0]\""
+param **.hostA[*].app[*].startTime uniform(0.1s,0.3s)
+param **.hostA[*].app[*].printPing true
+param **.hostB[*].app[*].destAddr "\"hostRouters[1]\""
+param **.hostB[*].app[*].startTime uniform(0.1s,0.3s)
+param **.hostB[*].app[*].printPing true
+param **.hostC[*].app[*].destAddr "\"hostRouters[2]\""
+param **.hostC[*].app[*].startTime uniform(0.1s,0.3s)
+param **.hostC[*].app[*].printPing true
+param **.host*.mobility.initFromDisplayString false
+param **.host*.mobility.typename "\"MassMobility\""
+param **.host*.osgModel "\"3d/drone.ive.100.scale.0,0,90.rot\""
+param **.host*.mobility.initialMovementHeading "uniform(0deg, 360deg)"
+param **.host*.mobility.initialMovementElevation "uniform(-90deg, 90deg)"
+param **.host*.mobility.rotationAxisAngle uniform(-10deg,10deg)
+param **.hostRouters[*].mobility.speed truncnormal(50mps,8mps)
+param **.hostRouters[*].mobility.changeInterval "truncnormal(2s, 1s)"
+param **.hostRouters[*].mobility.angleDelta "normal(-20deg, 20deg)"
+param **.host*.mobility.speed "truncnormal(20mps, 4mps)"
+param **.host*.mobility.changeInterval "truncnormal(3s, 1s)"
+param **.host*.mobility.angleDelta "normal(-10deg, 10deg)"
+param **.host*.mobility.initialZ 200m
+param **.host*.mobility.constraintAreaMinZ 100m
+param **.host*.mobility.constraintAreaMaxZ 300m
+param **.hostRouters[0].mobility.initialX 700m
+param **.hostRouters[0].mobility.initialY 700m
+param **.hostRouters[0].mobility.constraintAreaMinX 575m
+param **.hostRouters[0].mobility.constraintAreaMaxX 825m
+param **.hostRouters[0].mobility.constraintAreaMinY 575m
+param **.hostRouters[0].mobility.constraintAreaMaxY 825m
+param **.hostA[*].mobility.constraintAreaMinX 600m
+param **.hostA[*].mobility.constraintAreaMaxX 800m
+param **.hostA[*].mobility.constraintAreaMinY 600m
+param **.hostA[*].mobility.constraintAreaMaxY 800m
+param **.hostRouters[1].mobility.initialX 950m
+param **.hostRouters[1].mobility.initialY 450m
+param **.hostRouters[1].mobility.constraintAreaMinX 825m
+param **.hostRouters[1].mobility.constraintAreaMaxX 1075m
+param **.hostRouters[1].mobility.constraintAreaMinY 325m
+param **.hostRouters[1].mobility.constraintAreaMaxY 575m
+param **.hostB[*].mobility.constraintAreaMinX 850m
+param **.hostB[*].mobility.constraintAreaMaxX 1050m
+param **.hostB[*].mobility.constraintAreaMinY 350m
+param **.hostB[*].mobility.constraintAreaMaxY 550m
+param **.hostRouters[2].mobility.initialX 950m
+param **.hostRouters[2].mobility.initialY 950m
+param **.hostRouters[2].mobility.constraintAreaMinX 825m
+param **.hostRouters[2].mobility.constraintAreaMaxX 1075m
+param **.hostRouters[2].mobility.constraintAreaMinY 825m
+param **.hostRouters[2].mobility.constraintAreaMaxY 1075m
+param **.hostC[*].mobility.constraintAreaMinX 850m
+param **.hostC[*].mobility.constraintAreaMaxX 1050m
+param **.hostC[*].mobility.constraintAreaMinY 850m
+param **.hostC[*].mobility.constraintAreaMaxY 1050m
+
+vector 0 UAVNetwork_Multi.hostA[0].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 1 UAVNetwork_Multi.hostA[1].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 2 UAVNetwork_Multi.hostB[0].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 3 UAVNetwork_Multi.hostB[1].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 4 UAVNetwork_Multi.hostC[0].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 5 UAVNetwork_Multi.hostC[1].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 6 UAVNetwork_Multi.hostRouters[0].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 7 UAVNetwork_Multi.hostRouters[1].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 8 UAVNetwork_Multi.hostRouters[2].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 9 UAVNetwork_Multi.hostA[0].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 10 UAVNetwork_Multi.hostA[1].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 11 UAVNetwork_Multi.hostB[0].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 12 UAVNetwork_Multi.hostB[1].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 13 UAVNetwork_Multi.hostC[0].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 14 UAVNetwork_Multi.hostC[1].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 15 UAVNetwork_Multi.hostRouters[0].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 16 UAVNetwork_Multi.hostRouters[1].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 17 UAVNetwork_Multi.hostRouters[2].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 18 UAVNetwork_Multi.hostRouters[1].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 19 UAVNetwork_Multi.hostRouters[0].wlan[0].mac packetDropNotAddressedToUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, vector(packetBytes)"
+vector 20 UAVNetwork_Multi.hostRouters[2].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 21 UAVNetwork_Multi.hostRouters[0].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 22 UAVNetwork_Multi.hostRouters[1].wlan[0].mac packetDropIncorrectlyReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, vector(packetBytes)"
+vector 23 UAVNetwork_Multi.hostRouters[2].wlan[0].mac packetDropNotAddressedToUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, vector(packetBytes)"
+vector 24 UAVNetwork_Multi.hostRouters[0].wlan[0].mac packetDropIncorrectlyReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, vector(packetBytes)"
+vector 25 UAVNetwork_Multi.hostRouters[1].wlan[0].mac packetDropNotAddressedToUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, vector(packetBytes)"
+vector 26 UAVNetwork_Multi.hostRouters[2].wlan[0].mac packetDropRetryLimitReached:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drop: retry limit reached, vector(packetBytes)"
+vector 27 UAVNetwork_Multi.hostRouters[1].wlan[0].mac packetDropRetryLimitReached:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drop: retry limit reached, vector(packetBytes)"
+vector 28 UAVNetwork_Multi.hostRouters[0].wlan[0].mac packetDropRetryLimitReached:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drop: retry limit reached, vector(packetBytes)"
+vector 29 UAVNetwork_Multi.hostC[1].app[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 30 UAVNetwork_Multi.hostC[1].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 31 UAVNetwork_Multi.hostA[1].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 32 UAVNetwork_Multi.hostA[0].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 33 UAVNetwork_Multi.hostC[0].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 34 UAVNetwork_Multi.hostB[1].app[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 35 UAVNetwork_Multi.hostB[1].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 36 UAVNetwork_Multi.hostB[0].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 37 UAVNetwork_Multi.hostRouters[2].wlan[0].mac packetDropIncorrectlyReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, vector(packetBytes)"
+vector 38 UAVNetwork_Multi.hostB[0].app[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 39 UAVNetwork_Multi.hostC[1].wlan[0].mac packetDropIncorrectlyReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, vector(packetBytes)"
+vector 40 UAVNetwork_Multi.hostC[0].app[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 41 UAVNetwork_Multi.hostA[0].app[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 42 UAVNetwork_Multi.hostA[0].wlan[0].mac packetDropIncorrectlyReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, vector(packetBytes)"
+vector 43 UAVNetwork_Multi.hostA[1].wlan[0].mac packetDropIncorrectlyReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, vector(packetBytes)"
+vector 44 UAVNetwork_Multi.hostA[1].app[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 45 UAVNetwork_Multi.hostC[0].wlan[0].mac packetDropIncorrectlyReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, vector(packetBytes)"
+vector 46 UAVNetwork_Multi.hostB[0].wlan[0].mac packetDropIncorrectlyReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, vector(packetBytes)"
+vector 47 UAVNetwork_Multi.hostB[1].wlan[0].mac packetDropIncorrectlyReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, vector(packetBytes)"
+vector 48 UAVNetwork_Multi.hostRouters[0].app[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 49 UAVNetwork_Multi.hostRouters[0].app[0] pingRxSeq:vector ETV
+attr interpolationmode none
+attr title "ping rx seq, vector"
+vector 50 UAVNetwork_Multi.hostRouters[0].app[0] rtt:vector ETV
+attr interpolationmode none
+attr title "ping round-trip time, vector"
+attr unit s
+vector 51 UAVNetwork_Multi.hostRouters[0].app[0] numOutOfOrderArrivals:vector ETV
+attr interpolationmode none
+attr title "ping out-of-order arrivals, vector"
+vector 52 UAVNetwork_Multi.hostRouters[0].app[0] numLost:vector ETV
+attr interpolationmode none
+attr title "pings lost, vector"
+vector 53 UAVNetwork_Multi.hostRouters[2].app[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 54 UAVNetwork_Multi.hostRouters[2].app[0] pingRxSeq:vector ETV
+attr interpolationmode none
+attr title "ping rx seq, vector"
+vector 55 UAVNetwork_Multi.hostRouters[2].app[0] rtt:vector ETV
+attr interpolationmode none
+attr title "ping round-trip time, vector"
+attr unit s
+vector 56 UAVNetwork_Multi.hostRouters[1].app[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 57 UAVNetwork_Multi.hostRouters[1].app[0] pingRxSeq:vector ETV
+attr interpolationmode none
+attr title "ping rx seq, vector"
+vector 58 UAVNetwork_Multi.hostRouters[1].app[0] rtt:vector ETV
+attr interpolationmode none
+attr title "ping round-trip time, vector"
+attr unit s
+vector 59 UAVNetwork_Multi.hostRouters[1].app[0] numOutOfOrderArrivals:vector ETV
+attr interpolationmode none
+attr title "ping out-of-order arrivals, vector"
+vector 60 UAVNetwork_Multi.hostRouters[1].app[0] numLost:vector ETV
+attr interpolationmode none
+attr title "pings lost, vector"
+vector 61 UAVNetwork_Multi.hostRouters[2].app[0] numOutOfOrderArrivals:vector ETV
+attr interpolationmode none
+attr title "ping out-of-order arrivals, vector"
+vector 62 UAVNetwork_Multi.hostRouters[2].app[0] numLost:vector ETV
+attr interpolationmode none
+attr title "pings lost, vector"
+0	19636 1845 0 25844 0 7.658286308242 75 0 3 182 472
+1	21481 1855 0 25743 0 7.655306508861 75 0 3 182 472
+2	23336 1755 0 25996 0 7.66041089869 71 0 3 172 446
+3	25091 1751 0 25928 0 7.659206620263 71 0 3 172 446
+4	26842 1853 0 25973 0 7.659892204852 75 0 3 182 472
+5	28695 1753 0 26039 0 7.661496648914 71 0 3 172 446
+6	30448 11309 0 27928 0 9.176883778752 445 0 3 1107 2877
+7	41757 11569 0 28085 0 9.374640187092 457 0 3 1137 2955
+8	53326 13725 0 28061 0 9.374474795636 541 0 3 1347 3501
+9	67051 9723 0 26045 0 7.661497934636 384 0 3 647 1525
+10	76774 10607 0 26050 0 7.661497978568 402 0 3 687 1633
+11	87381 9729 0 26055 0 7.661498399075 369 0 3 617 1441
+12	97110 9705 0 26059 0 7.661498458401 368 0 3 618 1450
+13	106815 10415 0 26040 0 7.661496949701 395 0 3 670 1582
+14	117230 9451 0 26039 0 7.661496648914 358 0 3 593 1373
+15	126681 45565 0 28089 0 9.374641038377 1722 0 3 2736 6334
+16	172246 42857 0 28085 0 9.374640187092 1620 0 3 2465 5527
+17	215103 42615 0 28094 0 9.374641578389 1611 0 3 2349 5261
+18	257718 23993 10 28085 0.00015 9.374640187092 908 0 2 908 1362
+19	281711 6637 24 28072 0.000553179366 9.374476411095 241 48 104 17156 1259920
+20	288348 28472 32 28061 0.000683667842 9.374474795636 1076 0 2 1076 1614
+21	316820 23448 57 27928 0.001456847246 9.176883778752 884 0 2 884 1326
+22	340268 957 83 26305 0.001860026955 7.715000588593 35 48 72 2432 169600
+23	341225 4957 119 26864 0.002673004051 8.042898093988 180 48 104 12472 883424
+24	346182 955 149 26033 0.003464516041 7.661436456426 35 48 76 2432 169632
+25	347137 4846 184 27640 0.00443936414 9.044283752367 176 48 104 12200 864928
+26	351983 549 513 26229 0.012696147105 7.712302152339 20 48 68 1340 90160
+27	352532 355 536 25658 0.013169816611 7.653216683502 13 48 68 864 57792
+28	352887 442 574 26627 0.014774999207 7.771467992127 16 48 68 1068 71664
+29	353329 267 600 27863 0.112850921461 9.112850921461 10 0 9 45 285
+30	353596 3588 606 26039 0.114479506946 7.661496648914 136 0 2 136 204
+31	357184 3800 748 25743 0.118717313505 7.655306508861 144 0 2 144 216
+32	360984 3780 796 25844 0.119661869239 7.658286308242 144 0 2 144 216
+33	364764 3796 835 25973 0.120567056761 7.659892204852 144 0 2 144 216
+34	368560 268 976 27875 0.141881273128 9.141881273128 10 0 9 45 285
+35	368828 3584 983 25928 0.144710600895 7.659206620263 136 0 2 136 204
+36	372412 3592 1205 25996 0.14968174747 7.66041089869 136 0 2 136 204
+37	376004 826 1242 26038 0.150277589054 7.661437076794 30 68 76 2116 149392
+38	376830 269 1380 27907 0.166395960888 9.166395960888 10 0 9 45 285
+39	377099 82 1579 12576 0.174251903487 1.614647583604 3 72 72 216 15552
+40	377181 269 2048 27949 0.264245824981 9.264245824981 10 0 9 45 285
+41	377450 269 2353 27955 0.278572029341 9.278572029341 10 0 9 45 285
+42	377719 138 2541 25989 0.284230669981 7.659893426534 5 72 72 360 25920
+43	377857 164 2558 25985 0.284531565313 7.659893416501 6 72 72 432 31104
+44	378021 269 2696 27960 0.289495215239 9.289495215239 10 0 9 45 285
+45	378290 110 5290 19232 0.591618006841 4.670412726192 4 72 72 288 20736
+46	378400 83 7999 19929 0.972363536634 4.698506152628 3 72 72 216 15552
+47	378483 112 12653 25992 1.616250676486 7.659893789411 4 72 72 288 20736
+48	378595 156 16425 27572 4.04169662646 9.04169662646 6 0 5 15 55
+49	378751 242 16497 27645 4.043803970378 9.044283875397 9 0 5 18 64
+50	378993 238 16497 27645 4.043803970378 9.044283875397 6 0.002107343918 0.003866513837 0.016099831858 4.521287864098e-005
+51	379231 81 16590 22151 4.047035313037 7.047029654297 3 1 3 6 14
+52	379312 81 16590 22151 4.047035313037 7.047029654297 3 0 0 0 0
+53	379393 162 16701 27763 4.107656676322 9.107656676322 6 0 5 15 55
+54	379555 323 16793 27841 4.111643338744 9.109763559366 12 0 5 33 109
+55	379878 239 16793 27841 4.111643338744 9.109763559366 6 0.002106883044 0.004266963396 0.019242220079 6.7213163925887e-005
+56	380117 162 16881 27974 4.370109403972 9.370109403972 6 0 5 15 55
+57	380279 270 16998 28068 4.378116602194 9.374476187092 10 0 5 24 78
+58	380549 237 16998 28068 4.378116602194 9.374476187092 6 0.0023659986 0.008007198222 0.024347250344 0.00012045650286858
+59	380786 108 21086 23023 5.376028969673 7.377536782259 4 1 4 10 30
+60	380894 108 21086 23023 5.376028969673 7.377536782259 4 0 0 0 0
+61	381002 161 22369 22765 7.112975559137 7.147994434853 6 1 6 21 91
+62	381163 161 22369 22765 7.112975559137 7.147994434853 6 0 0 0 0
+
