@@ -1,0 +1,8 @@
+<environment>
+    <object position="min 40 70 100" orientation="0 0 0" shape="prism 200 200 200 200 200 200 20 20 20" 
+    material="forest" fill-color="160 228 160" opacity="0.8"/>
+    <object position="min 50 80 130" orientation="0 0 0" shape="prism 300 300 300 150 150 150 30 30 30" 
+    material="forest" fill-color="160 228 160" opacity="0.8"/>
+    <object position="min 100 200 300" orientation="0 0 0" shape="prism 300 300 300 150 150 150 30 30 30" 
+    material="forest" fill-color="160 228 160" opacity="0.8"/>
+</environment>

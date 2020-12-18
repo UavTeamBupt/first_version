@@ -1,0 +1,464 @@
+file 18682 1607845320                                           
+version 2
+run WithOLSR-0-20201213-15:39:07-13132
+attr configname WithOLSR
+attr datetime 20201213-15:39:07
+attr experiment WithOLSR
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network uavnetwork
+attr processid 13132
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.host[*].routingProtocol "\"OLSR\""
+param *.visualizer.osgVisualizer.typename "\"IntegratedOsgVisualizer\""
+param *.visualizer.osgVisualizer.sceneVisualizer.clearColor "\"skyblue\""
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneImage "\"showcases/desert\""
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneImageSize 5000m
+param *.visualizer.osgVisualizer.sceneVisualizer.axisLength 1000m
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneMinX -2000m
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneMinY -2000m
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneMinZ 0m
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneMaxX 3000m
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneMaxY 3000m
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneMaxZ 1000m
+param *.visualizer.osgVisualizer.networkNodeVisualizer.displayModuleName true
+param *.visualizer.*.mobilityVisualizer.displayMobility true
+param *.visualizer.*.mobilityVisualizer.displayPositions true
+param *.visualizer.*.mobilityVisualizer.displayOrientations true
+param *.visualizer.*.mobilityVisualizer.displayVelocities true
+param *.visualizer.*.mobilityVisualizer.displayMovementTrails true
+param *.visualizer.*.mobilityVisualizer.animationSpeed 1
+param **.constraintAreaMinX 0m
+param **.constraintAreaMinY 0m
+param **.constraintAreaMinZ 0m
+param **.constraintAreaMaxX 1000m
+param **.constraintAreaMaxY 1000m
+param **.constraintAreaMaxZ 1000m
+param *.numHosts 10
+param *.host[*].osgModel "\"3d/drone.ive.100.scale.0,0,90.rot\""
+param *.host[*].mobility.typename "\"MassMobility\""
+param *.host[*].mobility.changeInterval 1s
+param *.host[*].mobility.initialMovementHeading "uniform(0deg, 360deg)"
+param *.host[*].mobility.initialMovementElevation "uniform(-90deg, 90deg)"
+param *.host[*].mobility.angleDelta uniform(-10deg,10deg)
+param *.host[*].mobility.rotationAxisAngle uniform(-10deg,10deg)
+param *.host[*].mobility.speed uniform(10mps,20mps)
+param *.host[*].mobility.faceForward false
+param **.wlan[0].radio.displayInterferenceRange true
+param *.host[*].wlan[0].radio.displayCommunicationRange true
+param **.pingTestApp[*].continuous true
+param *.host[*].pingTestApp[*].destAddr "\"*\""
+param *.host[*].pingTestApp[*].startTime uniform(0.001s,3s)
+param *.host[*].pingTestApp[*].sendInterval 0.5s
+param *.host[*].pingTestApp[*].printPing true
+param *.host[*].numPingTestApps 1
+param **.wlan[*].bitrate 11Mbps
+param *.host[*].wlan[*].radio.transmitter.power 100mW
+
+vector 0 uavnetwork.host[0].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 1 uavnetwork.host[0].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 2 uavnetwork.host[1].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 3 uavnetwork.host[1].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 4 uavnetwork.host[2].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 5 uavnetwork.host[2].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 6 uavnetwork.host[3].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 7 uavnetwork.host[3].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 8 uavnetwork.host[4].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 9 uavnetwork.host[4].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 10 uavnetwork.host[5].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 11 uavnetwork.host[5].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 12 uavnetwork.host[6].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 13 uavnetwork.host[6].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 14 uavnetwork.host[7].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 15 uavnetwork.host[7].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 16 uavnetwork.host[8].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 17 uavnetwork.host[8].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 18 uavnetwork.host[9].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 19 uavnetwork.host[9].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 20 uavnetwork.host[0].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 21 uavnetwork.host[0].wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 22 uavnetwork.host[0].wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 23 uavnetwork.host[0].wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 24 uavnetwork.host[0].wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 25 uavnetwork.host[0].wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 26 uavnetwork.host[1].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 27 uavnetwork.host[1].wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 28 uavnetwork.host[1].wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 29 uavnetwork.host[1].wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 30 uavnetwork.host[1].wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 31 uavnetwork.host[1].wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 32 uavnetwork.host[2].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 33 uavnetwork.host[2].wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 34 uavnetwork.host[2].wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 35 uavnetwork.host[2].wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 36 uavnetwork.host[2].wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 37 uavnetwork.host[2].wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 38 uavnetwork.host[3].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 39 uavnetwork.host[3].wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 40 uavnetwork.host[3].wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 41 uavnetwork.host[3].wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 42 uavnetwork.host[3].wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 43 uavnetwork.host[3].wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 44 uavnetwork.host[4].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 45 uavnetwork.host[4].wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 46 uavnetwork.host[4].wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 47 uavnetwork.host[4].wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 48 uavnetwork.host[4].wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 49 uavnetwork.host[4].wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 50 uavnetwork.host[5].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 51 uavnetwork.host[5].wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 52 uavnetwork.host[5].wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 53 uavnetwork.host[5].wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 54 uavnetwork.host[5].wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 55 uavnetwork.host[5].wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 56 uavnetwork.host[6].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 57 uavnetwork.host[6].wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 58 uavnetwork.host[6].wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 59 uavnetwork.host[6].wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 60 uavnetwork.host[6].wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 61 uavnetwork.host[6].wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 62 uavnetwork.host[7].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 63 uavnetwork.host[7].wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 64 uavnetwork.host[7].wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 65 uavnetwork.host[7].wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 66 uavnetwork.host[7].wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 67 uavnetwork.host[7].wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 68 uavnetwork.host[8].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 69 uavnetwork.host[8].wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 70 uavnetwork.host[8].wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 71 uavnetwork.host[8].wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 72 uavnetwork.host[8].wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 73 uavnetwork.host[8].wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 74 uavnetwork.host[9].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 75 uavnetwork.host[9].wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 76 uavnetwork.host[9].wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 77 uavnetwork.host[9].wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 78 uavnetwork.host[9].wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 79 uavnetwork.host[9].wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+0	17200 27 0 0 0 0 3 0 2 2 4
+1	17227 9 0 0 0 0 1 0 0 0 0
+2	17236 27 0 0 0 0 3 0 2 2 4
+3	17263 9 0 0 0 0 1 0 0 0 0
+4	17272 27 0 0 0 0 3 0 2 2 4
+5	17299 9 0 0 0 0 1 0 0 0 0
+6	17308 27 0 0 0 0 3 0 2 2 4
+7	17335 9 0 0 0 0 1 0 0 0 0
+8	17344 27 0 0 0 0 3 0 2 2 4
+9	17371 9 0 0 0 0 1 0 0 0 0
+10	17380 30 0 0 0 0 3 0 2 2 4
+11	17410 10 0 0 0 0 1 0 0 0 0
+12	17420 30 0 0 0 0 3 0 2 2 4
+13	17450 10 0 0 0 0 1 0 0 0 0
+14	17460 30 0 0 0 0 3 0 2 2 4
+15	17490 10 0 0 0 0 1 0 0 0 0
+16	17500 30 0 0 0 0 3 0 2 2 4
+17	17530 10 0 0 0 0 1 0 0 0 0
+18	17540 30 0 0 0 0 3 0 2 2 4
+19	17570 10 0 0 0 0 1 0 0 0 0
+20	17580 10 0 0 0 0 1 1 1 1 1
+21	17590 20 0 0 0 0 2 0 0 0 0
+22	17610 20 0 0 0 0 2 0 0 0 0
+23	17630 20 0 0 0 0 2 0 0 0 0
+24	17650 20 0 0 0 0 2 0 0 0 0
+25	17670 20 0 0 0 0 2 0 0 0 0
+26	17690 10 0 0 0 0 1 1 1 1 1
+27	17700 20 0 0 0 0 2 0 0 0 0
+28	17720 20 0 0 0 0 2 0 0 0 0
+29	17740 20 0 0 0 0 2 0 0 0 0
+30	17760 20 0 0 0 0 2 0 0 0 0
+31	17780 20 0 0 0 0 2 0 0 0 0
+32	17800 10 0 0 0 0 1 1 1 1 1
+33	17810 20 0 0 0 0 2 0 0 0 0
+34	17830 20 0 0 0 0 2 0 0 0 0
+35	17850 20 0 0 0 0 2 0 0 0 0
+36	17870 20 0 0 0 0 2 0 0 0 0
+37	17890 20 0 0 0 0 2 0 0 0 0
+38	17910 10 0 0 0 0 1 1 1 1 1
+39	17920 20 0 0 0 0 2 0 0 0 0
+40	17940 20 0 0 0 0 2 0 0 0 0
+41	17960 20 0 0 0 0 2 0 0 0 0
+42	17980 20 0 0 0 0 2 0 0 0 0
+43	18000 20 0 0 0 0 2 0 0 0 0
+44	18020 10 0 0 0 0 1 1 1 1 1
+45	18030 20 0 0 0 0 2 0 0 0 0
+46	18050 20 0 0 0 0 2 0 0 0 0
+47	18070 20 0 0 0 0 2 0 0 0 0
+48	18090 20 0 0 0 0 2 0 0 0 0
+49	18110 20 0 0 0 0 2 0 0 0 0
+50	18130 10 0 0 0 0 1 1 1 1 1
+51	18140 20 0 0 0 0 2 0 0 0 0
+52	18160 20 0 0 0 0 2 0 0 0 0
+53	18180 20 0 0 0 0 2 0 0 0 0
+54	18200 20 0 0 0 0 2 0 0 0 0
+55	18220 20 0 0 0 0 2 0 0 0 0
+56	18240 10 0 0 0 0 1 1 1 1 1
+57	18250 20 0 0 0 0 2 0 0 0 0
+58	18270 20 0 0 0 0 2 0 0 0 0
+59	18290 20 0 0 0 0 2 0 0 0 0
+60	18310 20 0 0 0 0 2 0 0 0 0
+61	18330 20 0 0 0 0 2 0 0 0 0
+62	18350 10 0 0 0 0 1 1 1 1 1
+63	18360 20 0 0 0 0 2 0 0 0 0
+64	18380 20 0 0 0 0 2 0 0 0 0
+65	18400 20 0 0 0 0 2 0 0 0 0
+66	18420 20 0 0 0 0 2 0 0 0 0
+67	18440 20 0 0 0 0 2 0 0 0 0
+68	18460 10 0 0 0 0 1 1 1 1 1
+69	18470 20 0 0 0 0 2 0 0 0 0
+70	18490 20 0 0 0 0 2 0 0 0 0
+71	18510 20 0 0 0 0 2 0 0 0 0
+72	18530 20 0 0 0 0 2 0 0 0 0
+73	18550 20 0 0 0 0 2 0 0 0 0
+74	18570 10 0 0 0 0 1 1 1 1 1
+75	18580 20 0 0 0 0 2 0 0 0 0
+76	18600 20 0 0 0 0 2 0 0 0 0
+77	18620 20 0 0 0 0 2 0 0 0 0
+78	18640 20 0 0 0 0 2 0 0 0 0
+79	18660 20 0 0 0 0 2 0 0 0 0
+

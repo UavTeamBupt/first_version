@@ -1,0 +1,5398 @@
+version 2
+run General-0-20201213-16:39:54-2900
+attr configname General
+attr datetime 20201213-16:39:54
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network uavnetwork
+attr processid 2900
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.visualizer.osgVisualizer.typename "\"IntegratedOsgVisualizer\""
+param *.visualizer.osgVisualizer.sceneVisualizer.clearColor "\"skyblue\""
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneImage "\"showcases/forest\""
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneImageSize 5000m
+param *.visualizer.osgVisualizer.sceneVisualizer.axisLength 1000m
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneMinX -2000m
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneMinY -2000m
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneMinZ 0m
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneMaxX 3000m
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneMaxY 3000m
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneMaxZ 1000m
+param *.visualizer.osgVisualizer.networkNodeVisualizer.displayModuleName true
+param *.visualizer.*.mobilityVisualizer.displayMobility true
+param *.visualizer.*.mobilityVisualizer.displayPositions true
+param *.visualizer.*.mobilityVisualizer.displayOrientations true
+param *.visualizer.*.mobilityVisualizer.displayVelocities true
+param *.visualizer.*.mobilityVisualizer.displayMovementTrails true
+param *.visualizer.*.mobilityVisualizer.animationSpeed 1
+param **.constraintAreaMinX 0m
+param **.constraintAreaMinY 0m
+param **.constraintAreaMinZ 0m
+param **.constraintAreaMaxX 1000m
+param **.constraintAreaMaxY 1000m
+param **.constraintAreaMaxZ 1000m
+param *.numHosts 10
+param *.host[*].osgModel "\"3d/drone.ive.100.scale.0,0,90.rot\""
+param *.host[*].mobility.typename "\"MassMobility\""
+param *.host[*].mobility.changeInterval 1s
+param *.host[*].mobility.initialMovementHeading "uniform(0deg, 360deg)"
+param *.host[*].mobility.initialMovementElevation "uniform(-90deg, 90deg)"
+param *.host[*].mobility.angleDelta uniform(-10deg,10deg)
+param *.host[*].mobility.rotationAxisAngle uniform(-10deg,10deg)
+param *.host[*].mobility.speed uniform(10mps,20mps)
+param *.host[*].mobility.faceForward false
+param *.host[*].numApps 1
+param *.host[*].app[*].typename "\"PingApp\""
+param *.host[*].app[*].startTime uniform(0.001s,3s)
+param *.host[*].app[*].printPing true
+param *.host[*].app[*].destAddr "\"*\""
+param **.wlan[*].bitrate 11Mbps
+param **.wlan[*].BMac.maxQueueSize 14
+param **.wlan[0].radio.displayInterferenceRange true
+param *.host[*].wlan[0].radio.displayCommunicationRange true
+param *.host[*].wlan[*].radio.transmitter.power 50mW
+param *.visualizer.*.mediumVisualizer.displayCommunicationRanges true
+param *.visualizer.*.mediumVisualizer.displayInterferenceRanges true
+
+scalar uavnetwork.radioMedium.propagation "Arrival computation count" 13743
+scalar uavnetwork.radioMedium "transmission count" 1527
+scalar uavnetwork.radioMedium "signal send count" 13743
+scalar uavnetwork.radioMedium "reception computation count" 13743
+scalar uavnetwork.radioMedium "interference computation count" 42487
+scalar uavnetwork.radioMedium "reception decision computation count" 13556
+scalar uavnetwork.radioMedium "listening decision computation count" 15230
+scalar uavnetwork.radioMedium "reception cache hit" 85.678556913746
+attr unit %
+scalar uavnetwork.radioMedium "interference cache hit" 66.666666666667
+attr unit %
+scalar uavnetwork.radioMedium "noise cache hit" 0
+attr unit %
+scalar uavnetwork.radioMedium "snir cache hit" 50
+attr unit %
+scalar uavnetwork.radioMedium "reception decision cache hit" 50
+attr unit %
+scalar uavnetwork.radioMedium "reception result cache hit" 0
+attr unit %
+scalar uavnetwork.host[0].lo[0].lo rcvdPkFromHl:count 68
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar uavnetwork.host[0].lo[0].lo rcvdPkFromHl:sum(packetBytes) 5712
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar uavnetwork.host[0].lo[0].lo passedUpPk:count 68
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar uavnetwork.host[0].lo[0].lo passedUpPk:sum(packetBytes) 5712
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar uavnetwork.host[0].wlan[0].mac rcvdPkFromLl:count 855
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar uavnetwork.host[0].wlan[0].mac rcvdPkFromLl:sum(packetBytes) 54968
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar uavnetwork.host[0].wlan[0].mac sentDownPk:count 654
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar uavnetwork.host[0].wlan[0].mac sentDownPk:sum(packetBytes) 43514
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar uavnetwork.host[0].wlan[0].mac rcvdPkFromHl:count 334
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar uavnetwork.host[0].wlan[0].mac rcvdPkFromHl:sum(packetBytes) 29788
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar uavnetwork.host[0].wlan[0].mac passedUpPk:count 386
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar uavnetwork.host[0].wlan[0].mac passedUpPk:sum(packetBytes) 32416
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar uavnetwork.host[0].wlan[0].mac packetDropIncorrectlyReceived:count 13
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar uavnetwork.host[0].wlan[0].mac packetDropIncorrectlyReceived:sum(packetBytes) 1080
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar uavnetwork.host[0].wlan[0].mac packetDropNotAddressedToUs:count 132
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar uavnetwork.host[0].wlan[0].mac packetDropNotAddressedToUs:sum(packetBytes) 6128
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar uavnetwork.host[0].wlan[0].mac packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drop: queue overflow, count"
+scalar uavnetwork.host[0].wlan[0].mac packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drop: queue overflow, sum(packetBytes)"
+scalar uavnetwork.host[0].wlan[0].mac packetDropRetryLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drop: retry limit reached, count"
+scalar uavnetwork.host[0].wlan[0].mac packetDropRetryLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drop: retry limit reached, sum(packetBytes)"
+scalar uavnetwork.host[0].wlan[0].mac linkBroken:count 0
+attr interpolationmode none
+attr source linkBroken
+attr title "link break, count"
+statistic uavnetwork.host[0].wlan[0].radio minSnir:histogram
+field count 855
+field mean 1714.717798926
+field stddev 1533.4582205323
+field min 0.39503542351543
+field max 15492.51517688
+field sum 1466083.7180817
+field sqrsum 4522095819.567
+attr source minimumSnir(packetSentToUpper)
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	13
+bin	200	0
+bin	400	24
+bin	600	142
+bin	800	111
+bin	1000	172
+bin	1200	59
+bin	1400	45
+bin	1600	46
+bin	1800	32
+bin	2000	14
+bin	2200	24
+bin	2400	26
+bin	2600	12
+bin	2800	24
+bin	3000	7
+bin	3200	2
+bin	3400	23
+bin	3600	14
+bin	3800	2
+bin	4000	4
+bin	4200	16
+bin	4400	16
+bin	4600	6
+bin	4800	6
+bin	5000	0
+bin	5200	0
+bin	5400	2
+bin	5600	0
+bin	5800	0
+bin	6000	0
+bin	6200	0
+bin	6400	2
+bin	6600	0
+bin	6800	0
+bin	7000	0
+bin	7200	0
+bin	7400	0
+bin	7600	2
+bin	7800	0
+bin	8000	0
+bin	8200	0
+bin	8400	0
+bin	8600	2
+bin	8800	0
+bin	9000	0
+bin	9200	0
+bin	9400	0
+bin	9600	0
+bin	9800	2
+bin	10000	0
+bin	10200	0
+bin	10400	0
+bin	10600	0
+bin	10800	0
+bin	11000	0
+bin	11200	0
+bin	11400	0
+bin	11600	1
+bin	11800	1
+bin	12000	0
+bin	12200	0
+bin	12400	0
+bin	12600	0
+bin	12800	0
+bin	13000	0
+bin	13200	0
+bin	13400	2
+bin	13600	0
+bin	13800	0
+bin	14000	0
+bin	14200	0
+bin	14400	0
+bin	14600	0
+bin	14800	0
+bin	15000	0
+bin	15200	0
+bin	15400	1
+bin	15600	0
+statistic uavnetwork.host[0].wlan[0].radio packetErrorRate:histogram
+field count 855
+field mean 0.01501943525468
+field stddev 0.12103188289426
+field min 0
+field max 1
+field sum 12.841617142751
+field sqrsum 12.702877879338
+attr source packetErrorRate(packetSentToUpper)
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	0	842
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+bin	0.52	0
+bin	0.54	0
+bin	0.56	0
+bin	0.58	0
+bin	0.6	0
+bin	0.62	0
+bin	0.64	0
+bin	0.66	0
+bin	0.68	0
+bin	0.7	0
+bin	0.72	0
+bin	0.74	0
+bin	0.76	0
+bin	0.78	0
+bin	0.8	0
+bin	0.82	0
+bin	0.84	0
+bin	0.86	1
+bin	0.88	0
+bin	0.9	0
+bin	0.92	0
+bin	0.94	0
+bin	0.96	0
+bin	0.98	3
+bin	1	9
+bin	1.02	0
+bin	1.04	0
+bin	1.06	0
+bin	1.08	0
+bin	1.1	0
+bin	1.12	0
+bin	1.14	0
+bin	1.16	0
+bin	1.18	0
+bin	1.2	0
+bin	1.22	0
+bin	1.24	0
+bin	1.26	0
+statistic uavnetwork.host[0].wlan[0].radio bitErrorRate:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr source bitErrorRate(packetSentToUpper)
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic uavnetwork.host[0].wlan[0].radio symbolErrorRate:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr source symbolErrorRate(packetSentToUpper)
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar uavnetwork.host[0].wlan[0].radio transmissionState:count 2616
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar uavnetwork.host[0].wlan[0].radio receptionState:count 3030
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar uavnetwork.host[0].wlan[0].radio radioMode:count 1311
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic uavnetwork.host[0].wlan[0].radio radioChannel:histogram
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar uavnetwork.host[0].ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar uavnetwork.host[0].ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar uavnetwork.host[0].ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar uavnetwork.host[0].ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar uavnetwork.host[0].ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar uavnetwork.host[0].ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar uavnetwork.host[0].ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar uavnetwork.host[0].ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar uavnetwork.host[0].ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar uavnetwork.host[0].ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar uavnetwork.host[0].ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar uavnetwork.host[0].ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar uavnetwork.host[0].ipv4.arp arpReplySent:count 2
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar uavnetwork.host[0].ipv4.arp arpReplySent:sum(packetBytes) 56
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar uavnetwork.host[0].ipv4.arp arpRequestSent:count 9
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar uavnetwork.host[0].ipv4.arp arpRequestSent:sum(packetBytes) 252
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar uavnetwork.host[0].ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar uavnetwork.host[0].ipv4.arp arpResolutionCompleted:count 33
+attr title "ARP completed resolutions, count"
+scalar uavnetwork.host[0].ipv4.arp arpResolutionInitiated:count 9
+attr title "ARP initiated resolutions, count"
+scalar uavnetwork.host[0].udp packetReceived:count 0
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, count"
+scalar uavnetwork.host[0].udp packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+scalar uavnetwork.host[0].udp packetSent:count 0
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, count"
+scalar uavnetwork.host[0].udp packetSent:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, sum(packetBytes)"
+scalar uavnetwork.host[0].udp passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed up, count"
+scalar uavnetwork.host[0].udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+scalar uavnetwork.host[0].udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+scalar uavnetwork.host[0].app[0] "Pings sent" 34
+scalar uavnetwork.host[0].app[0] "ping loss rate (%)" 0
+scalar uavnetwork.host[0].app[0] "ping out-of-order rate (%)" 0
+scalar uavnetwork.host[0].app[0] pingRxSeq:count 34
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar uavnetwork.host[0].app[0] pingTxSeq:count 34
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar uavnetwork.host[0].app[0] numOutOfOrderArrivals:last nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar uavnetwork.host[0].app[0] numLost:last nan
+attr interpolationmode none
+attr title "pings lost, last"
+statistic uavnetwork.host[0].app[0] rtt:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar uavnetwork.host[1].lo[0].lo rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar uavnetwork.host[1].lo[0].lo rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar uavnetwork.host[1].lo[0].lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar uavnetwork.host[1].lo[0].lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar uavnetwork.host[1].wlan[0].mac rcvdPkFromLl:count 1409
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar uavnetwork.host[1].wlan[0].mac rcvdPkFromLl:sum(packetBytes) 92026
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar uavnetwork.host[1].wlan[0].mac sentDownPk:count 99
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar uavnetwork.host[1].wlan[0].mac sentDownPk:sum(packetBytes) 6434
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar uavnetwork.host[1].wlan[0].mac rcvdPkFromHl:count 54
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar uavnetwork.host[1].wlan[0].mac rcvdPkFromHl:sum(packetBytes) 4152
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar uavnetwork.host[1].wlan[0].mac passedUpPk:count 109
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar uavnetwork.host[1].wlan[0].mac passedUpPk:sum(packetBytes) 6840
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar uavnetwork.host[1].wlan[0].mac packetDropIncorrectlyReceived:count 8
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar uavnetwork.host[1].wlan[0].mac packetDropIncorrectlyReceived:sum(packetBytes) 692
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar uavnetwork.host[1].wlan[0].mac packetDropNotAddressedToUs:count 1246
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar uavnetwork.host[1].wlan[0].mac packetDropNotAddressedToUs:sum(packetBytes) 80724
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar uavnetwork.host[1].wlan[0].mac packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drop: queue overflow, count"
+scalar uavnetwork.host[1].wlan[0].mac packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drop: queue overflow, sum(packetBytes)"
+scalar uavnetwork.host[1].wlan[0].mac packetDropRetryLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drop: retry limit reached, count"
+scalar uavnetwork.host[1].wlan[0].mac packetDropRetryLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drop: retry limit reached, sum(packetBytes)"
+scalar uavnetwork.host[1].wlan[0].mac linkBroken:count 0
+attr interpolationmode none
+attr source linkBroken
+attr title "link break, count"
+statistic uavnetwork.host[1].wlan[0].radio minSnir:histogram
+field count 1409
+field mean 1936.6379181141
+field stddev 3286.6810038133
+field min 0.38137602446301
+field max 23332.883789372
+field sum 2728722.8266228
+field sqrsum 20494147099.386
+attr source minimumSnir(packetSentToUpper)
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	49
+bin	500	511
+bin	1000	567
+bin	1500	52
+bin	2000	82
+bin	2500	18
+bin	3000	10
+bin	3500	10
+bin	4000	6
+bin	4500	6
+bin	5000	6
+bin	5500	6
+bin	6000	2
+bin	6500	8
+bin	7000	0
+bin	7500	23
+bin	8000	1
+bin	8500	8
+bin	9000	2
+bin	9500	0
+bin	10000	4
+bin	10500	0
+bin	11000	0
+bin	11500	0
+bin	12000	4
+bin	12500	0
+bin	13000	0
+bin	13500	0
+bin	14000	4
+bin	14500	0
+bin	15000	0
+bin	15500	0
+bin	16000	0
+bin	16500	2
+bin	17000	2
+bin	17500	0
+bin	18000	0
+bin	18500	0
+bin	19000	0
+bin	19500	5
+bin	20000	0
+bin	20500	4
+bin	21000	0
+bin	21500	6
+bin	22000	3
+bin	22500	7
+bin	23000	1
+bin	23500	0
+bin	24000	0
+bin	24500	0
+bin	25000	0
+bin	25500	0
+bin	26000	0
+bin	26500	0
+bin	27000	0
+bin	27500	0
+bin	28000	0
+bin	28500	0
+bin	29000	0
+bin	29500	0
+statistic uavnetwork.host[1].wlan[0].radio packetErrorRate:histogram
+field count 1409
+field mean 0.0054560695481492
+field stddev 0.07264702037199
+field min 0
+field max 1
+field sum 7.6876019933422
+field sqrsum 7.4727902041852
+attr source packetErrorRate(packetSentToUpper)
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	0	1401
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+bin	0.52	0
+bin	0.54	0
+bin	0.56	0
+bin	0.58	0
+bin	0.6	0
+bin	0.62	0
+bin	0.64	0
+bin	0.66	0
+bin	0.68	1
+bin	0.7	0
+bin	0.72	0
+bin	0.74	0
+bin	0.76	0
+bin	0.78	0
+bin	0.8	0
+bin	0.82	0
+bin	0.84	0
+bin	0.86	0
+bin	0.88	0
+bin	0.9	0
+bin	0.92	0
+bin	0.94	0
+bin	0.96	0
+bin	0.98	1
+bin	1	6
+bin	1.02	0
+bin	1.04	0
+bin	1.06	0
+bin	1.08	0
+bin	1.1	0
+bin	1.12	0
+bin	1.14	0
+bin	1.16	0
+bin	1.18	0
+bin	1.2	0
+bin	1.22	0
+bin	1.24	0
+bin	1.26	0
+statistic uavnetwork.host[1].wlan[0].radio bitErrorRate:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr source bitErrorRate(packetSentToUpper)
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic uavnetwork.host[1].wlan[0].radio symbolErrorRate:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr source symbolErrorRate(packetSentToUpper)
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar uavnetwork.host[1].wlan[0].radio transmissionState:count 396
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar uavnetwork.host[1].wlan[0].radio receptionState:count 3030
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar uavnetwork.host[1].wlan[0].radio radioMode:count 201
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic uavnetwork.host[1].wlan[0].radio radioChannel:histogram
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar uavnetwork.host[1].ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar uavnetwork.host[1].ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar uavnetwork.host[1].ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar uavnetwork.host[1].ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar uavnetwork.host[1].ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar uavnetwork.host[1].ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar uavnetwork.host[1].ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar uavnetwork.host[1].ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar uavnetwork.host[1].ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar uavnetwork.host[1].ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar uavnetwork.host[1].ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar uavnetwork.host[1].ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar uavnetwork.host[1].ipv4.arp arpReplySent:count 3
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar uavnetwork.host[1].ipv4.arp arpReplySent:sum(packetBytes) 84
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar uavnetwork.host[1].ipv4.arp arpRequestSent:count 6
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar uavnetwork.host[1].ipv4.arp arpRequestSent:sum(packetBytes) 168
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar uavnetwork.host[1].ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar uavnetwork.host[1].ipv4.arp arpResolutionCompleted:count 32
+attr title "ARP completed resolutions, count"
+scalar uavnetwork.host[1].ipv4.arp arpResolutionInitiated:count 6
+attr title "ARP initiated resolutions, count"
+scalar uavnetwork.host[1].udp packetReceived:count 0
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, count"
+scalar uavnetwork.host[1].udp packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+scalar uavnetwork.host[1].udp packetSent:count 0
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, count"
+scalar uavnetwork.host[1].udp packetSent:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, sum(packetBytes)"
+scalar uavnetwork.host[1].udp passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed up, count"
+scalar uavnetwork.host[1].udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+scalar uavnetwork.host[1].udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+scalar uavnetwork.host[1].app[0] "Pings sent" 35
+scalar uavnetwork.host[1].app[0] "ping loss rate (%)" 0
+scalar uavnetwork.host[1].app[0] "ping out-of-order rate (%)" 0
+scalar uavnetwork.host[1].app[0] pingRxSeq:count 35
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar uavnetwork.host[1].app[0] pingTxSeq:count 35
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar uavnetwork.host[1].app[0] numOutOfOrderArrivals:last nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar uavnetwork.host[1].app[0] numLost:last nan
+attr interpolationmode none
+attr title "pings lost, last"
+statistic uavnetwork.host[1].app[0] rtt:histogram
+field count 35
+field mean 0.0013695280969714
+field stddev 0.0014953054589845
+field min 0.000827410086
+field max 0.00989098392
+field sum 0.047933483394
+field sqrsum 0.00014166815842654
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	0.0002	0
+bin	0.0004	0
+bin	0.0006	0
+bin	0.0008	11
+bin	0.001	9
+bin	0.0012	11
+bin	0.0014	3
+bin	0.0016	0
+bin	0.0018	0
+bin	0.002	0
+bin	0.0022	0
+bin	0.0024	0
+bin	0.0026	0
+bin	0.0028	0
+bin	0.003	0
+bin	0.0032	0
+bin	0.0034	0
+bin	0.0036	0
+bin	0.0038	0
+bin	0.004	0
+bin	0.0042	0
+bin	0.0044	0
+bin	0.0046	0
+bin	0.0048	0
+bin	0.005	0
+bin	0.0052	0
+bin	0.0054	0
+bin	0.0056	0
+bin	0.0058	0
+bin	0.006	0
+bin	0.0062	0
+bin	0.0064	0
+bin	0.0066	0
+bin	0.0068	0
+bin	0.007	0
+bin	0.0072	0
+bin	0.0074	0
+bin	0.0076	0
+bin	0.0078	0
+bin	0.008	0
+bin	0.0082	0
+bin	0.0084	0
+bin	0.0086	0
+bin	0.0088	0
+bin	0.009	0
+bin	0.0092	0
+bin	0.0094	0
+bin	0.0096	0
+bin	0.0098	1
+bin	0.01	0
+bin	0.0102	0
+bin	0.0104	0
+bin	0.0106	0
+bin	0.0108	0
+bin	0.011	0
+bin	0.0112	0
+bin	0.0114	0
+bin	0.0116	0
+bin	0.0118	0
+bin	0.012	0
+bin	0.0122	0
+scalar uavnetwork.host[2].lo[0].lo rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar uavnetwork.host[2].lo[0].lo rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar uavnetwork.host[2].lo[0].lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar uavnetwork.host[2].lo[0].lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar uavnetwork.host[2].wlan[0].mac rcvdPkFromLl:count 1409
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar uavnetwork.host[2].wlan[0].mac rcvdPkFromLl:sum(packetBytes) 92006
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar uavnetwork.host[2].wlan[0].mac sentDownPk:count 99
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar uavnetwork.host[2].wlan[0].mac sentDownPk:sum(packetBytes) 6462
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar uavnetwork.host[2].wlan[0].mac rcvdPkFromHl:count 55
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar uavnetwork.host[2].wlan[0].mac rcvdPkFromHl:sum(packetBytes) 4236
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar uavnetwork.host[2].wlan[0].mac passedUpPk:count 109
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar uavnetwork.host[2].wlan[0].mac passedUpPk:sum(packetBytes) 6928
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar uavnetwork.host[2].wlan[0].mac packetDropIncorrectlyReceived:count 11
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar uavnetwork.host[2].wlan[0].mac packetDropIncorrectlyReceived:sum(packetBytes) 932
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar uavnetwork.host[2].wlan[0].mac packetDropNotAddressedToUs:count 1243
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar uavnetwork.host[2].wlan[0].mac packetDropNotAddressedToUs:sum(packetBytes) 80450
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar uavnetwork.host[2].wlan[0].mac packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drop: queue overflow, count"
+scalar uavnetwork.host[2].wlan[0].mac packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drop: queue overflow, sum(packetBytes)"
+scalar uavnetwork.host[2].wlan[0].mac packetDropRetryLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drop: retry limit reached, count"
+scalar uavnetwork.host[2].wlan[0].mac packetDropRetryLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drop: retry limit reached, sum(packetBytes)"
+scalar uavnetwork.host[2].wlan[0].mac linkBroken:count 0
+attr interpolationmode none
+attr source linkBroken
+attr title "link break, count"
+statistic uavnetwork.host[2].wlan[0].radio minSnir:histogram
+field count 1409
+field mean 2652.0852713371
+field stddev 1462.9129678804
+field min 0.92315502043389
+field max 4930.3878895057
+field sum 3736788.1473139
+field sqrsum 12923561814.641
+attr source minimumSnir(packetSentToUpper)
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	11
+bin	100	0
+bin	200	0
+bin	300	0
+bin	400	48
+bin	500	42
+bin	600	26
+bin	700	31
+bin	800	39
+bin	900	36
+bin	1000	60
+bin	1100	23
+bin	1200	62
+bin	1300	30
+bin	1400	26
+bin	1500	62
+bin	1600	36
+bin	1700	16
+bin	1800	20
+bin	1900	8
+bin	2000	4
+bin	2100	4
+bin	2200	10
+bin	2300	20
+bin	2400	23
+bin	2500	36
+bin	2600	33
+bin	2700	30
+bin	2800	64
+bin	2900	22
+bin	3000	12
+bin	3100	10
+bin	3200	10
+bin	3300	8
+bin	3400	11
+bin	3500	37
+bin	3600	24
+bin	3700	36
+bin	3800	25
+bin	3900	20
+bin	4000	22
+bin	4100	26
+bin	4200	44
+bin	4300	66
+bin	4400	124
+bin	4500	14
+bin	4600	14
+bin	4700	24
+bin	4800	32
+bin	4900	28
+bin	5000	0
+statistic uavnetwork.host[2].wlan[0].radio packetErrorRate:histogram
+field count 1409
+field mean 0.0077667266370317
+field stddev 0.087600442114438
+field min 0
+field max 1
+field sum 10.943317831578
+field sqrsum 10.889756899872
+attr source packetErrorRate(packetSentToUpper)
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	0	1398
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+bin	0.52	0
+bin	0.54	0
+bin	0.56	0
+bin	0.58	0
+bin	0.6	0
+bin	0.62	0
+bin	0.64	0
+bin	0.66	0
+bin	0.68	0
+bin	0.7	0
+bin	0.72	0
+bin	0.74	0
+bin	0.76	0
+bin	0.78	0
+bin	0.8	0
+bin	0.82	0
+bin	0.84	0
+bin	0.86	0
+bin	0.88	0
+bin	0.9	0
+bin	0.92	0
+bin	0.94	1
+bin	0.96	0
+bin	0.98	5
+bin	1	5
+bin	1.02	0
+bin	1.04	0
+bin	1.06	0
+bin	1.08	0
+bin	1.1	0
+bin	1.12	0
+bin	1.14	0
+bin	1.16	0
+bin	1.18	0
+bin	1.2	0
+bin	1.22	0
+bin	1.24	0
+bin	1.26	0
+statistic uavnetwork.host[2].wlan[0].radio bitErrorRate:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr source bitErrorRate(packetSentToUpper)
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic uavnetwork.host[2].wlan[0].radio symbolErrorRate:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr source symbolErrorRate(packetSentToUpper)
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar uavnetwork.host[2].wlan[0].radio transmissionState:count 396
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar uavnetwork.host[2].wlan[0].radio receptionState:count 3029
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar uavnetwork.host[2].wlan[0].radio radioMode:count 201
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic uavnetwork.host[2].wlan[0].radio radioChannel:histogram
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar uavnetwork.host[2].ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar uavnetwork.host[2].ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar uavnetwork.host[2].ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar uavnetwork.host[2].ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar uavnetwork.host[2].ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar uavnetwork.host[2].ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar uavnetwork.host[2].ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar uavnetwork.host[2].ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar uavnetwork.host[2].ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar uavnetwork.host[2].ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar uavnetwork.host[2].ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar uavnetwork.host[2].ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar uavnetwork.host[2].ipv4.arp arpReplySent:count 1
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar uavnetwork.host[2].ipv4.arp arpReplySent:sum(packetBytes) 28
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar uavnetwork.host[2].ipv4.arp arpRequestSent:count 8
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar uavnetwork.host[2].ipv4.arp arpRequestSent:sum(packetBytes) 224
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar uavnetwork.host[2].ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar uavnetwork.host[2].ipv4.arp arpResolutionCompleted:count 33
+attr title "ARP completed resolutions, count"
+scalar uavnetwork.host[2].ipv4.arp arpResolutionInitiated:count 8
+attr title "ARP initiated resolutions, count"
+scalar uavnetwork.host[2].udp packetReceived:count 0
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, count"
+scalar uavnetwork.host[2].udp packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+scalar uavnetwork.host[2].udp packetSent:count 0
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, count"
+scalar uavnetwork.host[2].udp packetSent:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, sum(packetBytes)"
+scalar uavnetwork.host[2].udp passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed up, count"
+scalar uavnetwork.host[2].udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+scalar uavnetwork.host[2].udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+scalar uavnetwork.host[2].app[0] "Pings sent" 36
+scalar uavnetwork.host[2].app[0] "ping loss rate (%)" 0
+scalar uavnetwork.host[2].app[0] "ping out-of-order rate (%)" 0
+scalar uavnetwork.host[2].app[0] pingRxSeq:count 36
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar uavnetwork.host[2].app[0] pingTxSeq:count 36
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar uavnetwork.host[2].app[0] numOutOfOrderArrivals:last nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar uavnetwork.host[2].app[0] numLost:last nan
+attr interpolationmode none
+attr title "pings lost, last"
+statistic uavnetwork.host[2].app[0] rtt:histogram
+field count 36
+field mean 0.0012722444948889
+field stddev 0.00092699662723663
+field min 0.000825230413
+field max 0.006552578056
+field sum 0.045800801816
+field sqrsum 8.8346114113686e-005
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	0.0001	0
+bin	0.0002	0
+bin	0.0003	0
+bin	0.0004	0
+bin	0.0005	0
+bin	0.0006	0
+bin	0.0007	0
+bin	0.0008	6
+bin	0.0009	8
+bin	0.001	0
+bin	0.0011	7
+bin	0.0012	5
+bin	0.0013	6
+bin	0.0014	3
+bin	0.0015	0
+bin	0.0016	0
+bin	0.0017	0
+bin	0.0018	0
+bin	0.0019	0
+bin	0.002	0
+bin	0.0021	0
+bin	0.0022	0
+bin	0.0023	0
+bin	0.0024	0
+bin	0.0025	0
+bin	0.0026	0
+bin	0.0027	0
+bin	0.0028	0
+bin	0.0029	0
+bin	0.003	0
+bin	0.0031	0
+bin	0.0032	0
+bin	0.0033	0
+bin	0.0034	0
+bin	0.0035	0
+bin	0.0036	0
+bin	0.0037	0
+bin	0.0038	0
+bin	0.0039	0
+bin	0.004	0
+bin	0.0041	0
+bin	0.0042	0
+bin	0.0043	0
+bin	0.0044	0
+bin	0.0045	0
+bin	0.0046	0
+bin	0.0047	0
+bin	0.0048	0
+bin	0.0049	0
+bin	0.005	0
+bin	0.0051	0
+bin	0.0052	0
+bin	0.0053	0
+bin	0.0054	0
+bin	0.0055	0
+bin	0.0056	0
+bin	0.0057	0
+bin	0.0058	0
+bin	0.0059	0
+bin	0.006	0
+bin	0.0061	0
+bin	0.0062	0
+bin	0.0063	0
+bin	0.0064	0
+bin	0.0065	1
+bin	0.0066	0
+bin	0.0067	0
+bin	0.0068	0
+bin	0.0069	0
+bin	0.007	0
+bin	0.0071	0
+bin	0.0072	0
+bin	0.0073	0
+bin	0.0074	0
+bin	0.0075	0
+bin	0.0076	0
+bin	0.0077	0
+bin	0.0078	0
+bin	0.0079	0
+bin	0.008	0
+scalar uavnetwork.host[3].lo[0].lo rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar uavnetwork.host[3].lo[0].lo rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar uavnetwork.host[3].lo[0].lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar uavnetwork.host[3].lo[0].lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar uavnetwork.host[3].wlan[0].mac rcvdPkFromLl:count 1409
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar uavnetwork.host[3].wlan[0].mac rcvdPkFromLl:sum(packetBytes) 92032
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar uavnetwork.host[3].wlan[0].mac sentDownPk:count 99
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar uavnetwork.host[3].wlan[0].mac sentDownPk:sum(packetBytes) 6432
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar uavnetwork.host[3].wlan[0].mac rcvdPkFromHl:count 52
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar uavnetwork.host[3].wlan[0].mac rcvdPkFromHl:sum(packetBytes) 4092
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar uavnetwork.host[3].wlan[0].mac passedUpPk:count 109
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar uavnetwork.host[3].wlan[0].mac passedUpPk:sum(packetBytes) 6876
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar uavnetwork.host[3].wlan[0].mac packetDropIncorrectlyReceived:count 10
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar uavnetwork.host[3].wlan[0].mac packetDropIncorrectlyReceived:sum(packetBytes) 784
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar uavnetwork.host[3].wlan[0].mac packetDropNotAddressedToUs:count 1247
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar uavnetwork.host[3].wlan[0].mac packetDropNotAddressedToUs:sum(packetBytes) 80718
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar uavnetwork.host[3].wlan[0].mac packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drop: queue overflow, count"
+scalar uavnetwork.host[3].wlan[0].mac packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drop: queue overflow, sum(packetBytes)"
+scalar uavnetwork.host[3].wlan[0].mac packetDropRetryLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drop: retry limit reached, count"
+scalar uavnetwork.host[3].wlan[0].mac packetDropRetryLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drop: retry limit reached, sum(packetBytes)"
+scalar uavnetwork.host[3].wlan[0].mac linkBroken:count 0
+attr interpolationmode none
+attr source linkBroken
+attr title "link break, count"
+statistic uavnetwork.host[3].wlan[0].radio minSnir:histogram
+field count 1409
+field mean 6591.4390924446
+field stddev 50394.832880671
+field min 0.73352835813421
+field max 794144.73340236
+field sum 9287337.6812545
+field sqrsum 3637028887604.5
+attr source minimumSnir(packetSentToUpper)
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	1343
+bin	9000	26
+bin	18000	18
+bin	27000	2
+bin	36000	4
+bin	45000	0
+bin	54000	2
+bin	63000	0
+bin	72000	0
+bin	81000	2
+bin	90000	0
+bin	99000	0
+bin	108000	0
+bin	117000	0
+bin	126000	2
+bin	135000	0
+bin	144000	0
+bin	153000	0
+bin	162000	0
+bin	171000	0
+bin	180000	0
+bin	189000	0
+bin	198000	0
+bin	207000	0
+bin	216000	0
+bin	225000	2
+bin	234000	0
+bin	243000	0
+bin	252000	0
+bin	261000	0
+bin	270000	0
+bin	279000	0
+bin	288000	0
+bin	297000	0
+bin	306000	0
+bin	315000	0
+bin	324000	0
+bin	333000	0
+bin	342000	0
+bin	351000	0
+bin	360000	0
+bin	369000	0
+bin	378000	0
+bin	387000	0
+bin	396000	0
+bin	405000	0
+bin	414000	2
+bin	423000	0
+bin	432000	0
+bin	441000	0
+bin	450000	0
+bin	459000	0
+bin	468000	0
+bin	477000	0
+bin	486000	0
+bin	495000	0
+bin	504000	0
+bin	513000	0
+bin	522000	0
+bin	531000	0
+bin	540000	0
+bin	549000	2
+bin	558000	0
+bin	567000	0
+bin	576000	0
+bin	585000	0
+bin	594000	0
+bin	603000	0
+bin	612000	0
+bin	621000	0
+bin	630000	0
+bin	639000	0
+bin	648000	0
+bin	657000	0
+bin	666000	0
+bin	675000	0
+bin	684000	0
+bin	693000	0
+bin	702000	0
+bin	711000	0
+bin	720000	0
+bin	729000	0
+bin	738000	0
+bin	747000	0
+bin	756000	0
+bin	765000	0
+bin	774000	0
+bin	783000	2
+bin	792000	2
+bin	801000	0
+statistic uavnetwork.host[3].wlan[0].radio packetErrorRate:histogram
+field count 1409
+field mean 0.0070960338470331
+field stddev 0.083961223042561
+field min 0
+field max 1
+field sum 9.9983116904697
+field sqrsum 9.996626018691
+attr source packetErrorRate(packetSentToUpper)
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1399
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+bin	0.52	0
+bin	0.54	0
+bin	0.56	0
+bin	0.58	0
+bin	0.6	0
+bin	0.62	0
+bin	0.64	0
+bin	0.66	0
+bin	0.68	0
+bin	0.7	0
+bin	0.72	0
+bin	0.74	0
+bin	0.76	0
+bin	0.78	0
+bin	0.8	0
+bin	0.82	0
+bin	0.84	0
+bin	0.86	0
+bin	0.88	0
+bin	0.9	0
+bin	0.92	0
+bin	0.94	0
+bin	0.96	0
+bin	0.98	5
+bin	1	5
+bin	1.02	0
+statistic uavnetwork.host[3].wlan[0].radio bitErrorRate:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr source bitErrorRate(packetSentToUpper)
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic uavnetwork.host[3].wlan[0].radio symbolErrorRate:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr source symbolErrorRate(packetSentToUpper)
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar uavnetwork.host[3].wlan[0].radio transmissionState:count 396
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar uavnetwork.host[3].wlan[0].radio receptionState:count 3030
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar uavnetwork.host[3].wlan[0].radio radioMode:count 201
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic uavnetwork.host[3].wlan[0].radio radioChannel:histogram
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar uavnetwork.host[3].ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar uavnetwork.host[3].ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar uavnetwork.host[3].ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar uavnetwork.host[3].ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar uavnetwork.host[3].ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar uavnetwork.host[3].ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar uavnetwork.host[3].ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar uavnetwork.host[3].ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar uavnetwork.host[3].ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar uavnetwork.host[3].ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar uavnetwork.host[3].ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar uavnetwork.host[3].ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar uavnetwork.host[3].ipv4.arp arpReplySent:count 4
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar uavnetwork.host[3].ipv4.arp arpReplySent:sum(packetBytes) 112
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar uavnetwork.host[3].ipv4.arp arpRequestSent:count 3
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar uavnetwork.host[3].ipv4.arp arpRequestSent:sum(packetBytes) 84
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar uavnetwork.host[3].ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar uavnetwork.host[3].ipv4.arp arpResolutionCompleted:count 17
+attr title "ARP completed resolutions, count"
+scalar uavnetwork.host[3].ipv4.arp arpResolutionInitiated:count 3
+attr title "ARP initiated resolutions, count"
+scalar uavnetwork.host[3].udp packetReceived:count 0
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, count"
+scalar uavnetwork.host[3].udp packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+scalar uavnetwork.host[3].udp packetSent:count 0
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, count"
+scalar uavnetwork.host[3].udp packetSent:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, sum(packetBytes)"
+scalar uavnetwork.host[3].udp passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed up, count"
+scalar uavnetwork.host[3].udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+scalar uavnetwork.host[3].udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+scalar uavnetwork.host[3].app[0] "Pings sent" 35
+scalar uavnetwork.host[3].app[0] "ping loss rate (%)" 0
+scalar uavnetwork.host[3].app[0] "ping out-of-order rate (%)" 0
+scalar uavnetwork.host[3].app[0] pingRxSeq:count 35
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar uavnetwork.host[3].app[0] pingTxSeq:count 35
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar uavnetwork.host[3].app[0] numOutOfOrderArrivals:last nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar uavnetwork.host[3].app[0] numLost:last nan
+attr interpolationmode none
+attr title "pings lost, last"
+statistic uavnetwork.host[3].app[0] rtt:histogram
+field count 35
+field mean 0.0015097176291429
+field stddev 0.002323146029311
+field min 0.000847306314
+field max 0.014811412647
+field sum 0.05284011702
+field sqrsum 0.00026327191029018
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	0.0002	0
+bin	0.0004	0
+bin	0.0006	0
+bin	0.0008	14
+bin	0.001	6
+bin	0.0012	11
+bin	0.0014	3
+bin	0.0016	0
+bin	0.0018	0
+bin	0.002	0
+bin	0.0022	0
+bin	0.0024	0
+bin	0.0026	0
+bin	0.0028	0
+bin	0.003	0
+bin	0.0032	0
+bin	0.0034	0
+bin	0.0036	0
+bin	0.0038	0
+bin	0.004	0
+bin	0.0042	0
+bin	0.0044	0
+bin	0.0046	0
+bin	0.0048	0
+bin	0.005	0
+bin	0.0052	0
+bin	0.0054	0
+bin	0.0056	0
+bin	0.0058	0
+bin	0.006	0
+bin	0.0062	0
+bin	0.0064	0
+bin	0.0066	0
+bin	0.0068	0
+bin	0.007	0
+bin	0.0072	0
+bin	0.0074	0
+bin	0.0076	0
+bin	0.0078	0
+bin	0.008	0
+bin	0.0082	0
+bin	0.0084	0
+bin	0.0086	0
+bin	0.0088	0
+bin	0.009	0
+bin	0.0092	0
+bin	0.0094	0
+bin	0.0096	0
+bin	0.0098	0
+bin	0.01	0
+bin	0.0102	0
+bin	0.0104	0
+bin	0.0106	0
+bin	0.0108	0
+bin	0.011	0
+bin	0.0112	0
+bin	0.0114	0
+bin	0.0116	0
+bin	0.0118	0
+bin	0.012	0
+bin	0.0122	0
+bin	0.0124	0
+bin	0.0126	0
+bin	0.0128	0
+bin	0.013	0
+bin	0.0132	0
+bin	0.0134	0
+bin	0.0136	0
+bin	0.0138	0
+bin	0.014	0
+bin	0.0142	0
+bin	0.0144	0
+bin	0.0146	0
+bin	0.0148	1
+bin	0.015	0
+bin	0.0152	0
+bin	0.0154	0
+bin	0.0156	0
+bin	0.0158	0
+bin	0.016	0
+bin	0.0162	0
+bin	0.0164	0
+bin	0.0166	0
+bin	0.0168	0
+bin	0.017	0
+bin	0.0172	0
+bin	0.0174	0
+bin	0.0176	0
+bin	0.0178	0
+bin	0.018	0
+bin	0.0182	0
+bin	0.0184	0
+scalar uavnetwork.host[4].lo[0].lo rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar uavnetwork.host[4].lo[0].lo rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar uavnetwork.host[4].lo[0].lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar uavnetwork.host[4].lo[0].lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar uavnetwork.host[4].wlan[0].mac rcvdPkFromLl:count 1409
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar uavnetwork.host[4].wlan[0].mac rcvdPkFromLl:sum(packetBytes) 92026
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar uavnetwork.host[4].wlan[0].mac sentDownPk:count 99
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar uavnetwork.host[4].wlan[0].mac sentDownPk:sum(packetBytes) 6394
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar uavnetwork.host[4].wlan[0].mac rcvdPkFromHl:count 53
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar uavnetwork.host[4].wlan[0].mac rcvdPkFromHl:sum(packetBytes) 4056
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar uavnetwork.host[4].wlan[0].mac passedUpPk:count 110
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar uavnetwork.host[4].wlan[0].mac passedUpPk:sum(packetBytes) 6848
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar uavnetwork.host[4].wlan[0].mac packetDropIncorrectlyReceived:count 8
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar uavnetwork.host[4].wlan[0].mac packetDropIncorrectlyReceived:sum(packetBytes) 652
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar uavnetwork.host[4].wlan[0].mac packetDropNotAddressedToUs:count 1247
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar uavnetwork.host[4].wlan[0].mac packetDropNotAddressedToUs:sum(packetBytes) 80830
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar uavnetwork.host[4].wlan[0].mac packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drop: queue overflow, count"
+scalar uavnetwork.host[4].wlan[0].mac packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drop: queue overflow, sum(packetBytes)"
+scalar uavnetwork.host[4].wlan[0].mac packetDropRetryLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drop: retry limit reached, count"
+scalar uavnetwork.host[4].wlan[0].mac packetDropRetryLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drop: retry limit reached, sum(packetBytes)"
+scalar uavnetwork.host[4].wlan[0].mac linkBroken:count 0
+attr interpolationmode none
+attr source linkBroken
+attr title "link break, count"
+statistic uavnetwork.host[4].wlan[0].radio minSnir:histogram
+field count 1409
+field mean 6713.0673235613
+field stddev 52741.461733018
+field min 0.058465120746318
+field max 862036.4633534
+field sum 9458711.8588979
+field sqrsum 3980076763818.3
+attr source minimumSnir(packetSentToUpper)
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	1341
+bin	12000	44
+bin	24000	4
+bin	36000	2
+bin	48000	2
+bin	60000	2
+bin	72000	0
+bin	84000	0
+bin	96000	2
+bin	108000	0
+bin	120000	0
+bin	132000	0
+bin	144000	0
+bin	156000	2
+bin	168000	0
+bin	180000	0
+bin	192000	0
+bin	204000	0
+bin	216000	0
+bin	228000	0
+bin	240000	0
+bin	252000	0
+bin	264000	0
+bin	276000	0
+bin	288000	2
+bin	300000	0
+bin	312000	0
+bin	324000	0
+bin	336000	0
+bin	348000	0
+bin	360000	0
+bin	372000	0
+bin	384000	0
+bin	396000	0
+bin	408000	0
+bin	420000	0
+bin	432000	0
+bin	444000	2
+bin	456000	0
+bin	468000	0
+bin	480000	0
+bin	492000	0
+bin	504000	0
+bin	516000	0
+bin	528000	0
+bin	540000	0
+bin	552000	0
+bin	564000	0
+bin	576000	0
+bin	588000	0
+bin	600000	0
+bin	612000	2
+bin	624000	0
+bin	636000	0
+bin	648000	0
+bin	660000	0
+bin	672000	0
+bin	684000	0
+bin	696000	0
+bin	708000	0
+bin	720000	2
+bin	732000	0
+bin	744000	0
+bin	756000	0
+bin	768000	0
+bin	780000	0
+bin	792000	0
+bin	804000	0
+bin	816000	0
+bin	828000	0
+bin	840000	0
+bin	852000	2
+bin	864000	0
+statistic uavnetwork.host[4].wlan[0].radio packetErrorRate:histogram
+field count 1409
+field mean 0.0047222974505388
+field stddev 0.066625609951335
+field min 0
+field max 1
+field sum 6.6537171078092
+field sqrsum 6.2814932684884
+attr source packetErrorRate(packetSentToUpper)
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	0	1400
+bin	0.02	1
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	1
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	1
+bin	0.52	0
+bin	0.54	0
+bin	0.56	0
+bin	0.58	0
+bin	0.6	0
+bin	0.62	0
+bin	0.64	0
+bin	0.66	0
+bin	0.68	0
+bin	0.7	0
+bin	0.72	0
+bin	0.74	0
+bin	0.76	0
+bin	0.78	0
+bin	0.8	0
+bin	0.82	0
+bin	0.84	0
+bin	0.86	0
+bin	0.88	0
+bin	0.9	0
+bin	0.92	0
+bin	0.94	0
+bin	0.96	0
+bin	0.98	3
+bin	1	3
+bin	1.02	0
+bin	1.04	0
+bin	1.06	0
+bin	1.08	0
+bin	1.1	0
+bin	1.12	0
+bin	1.14	0
+bin	1.16	0
+bin	1.18	0
+bin	1.2	0
+bin	1.22	0
+bin	1.24	0
+bin	1.26	0
+statistic uavnetwork.host[4].wlan[0].radio bitErrorRate:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr source bitErrorRate(packetSentToUpper)
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic uavnetwork.host[4].wlan[0].radio symbolErrorRate:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr source symbolErrorRate(packetSentToUpper)
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar uavnetwork.host[4].wlan[0].radio transmissionState:count 396
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar uavnetwork.host[4].wlan[0].radio receptionState:count 3031
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar uavnetwork.host[4].wlan[0].radio radioMode:count 201
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic uavnetwork.host[4].wlan[0].radio radioChannel:histogram
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar uavnetwork.host[4].ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar uavnetwork.host[4].ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar uavnetwork.host[4].ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar uavnetwork.host[4].ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar uavnetwork.host[4].ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar uavnetwork.host[4].ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar uavnetwork.host[4].ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar uavnetwork.host[4].ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar uavnetwork.host[4].ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar uavnetwork.host[4].ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar uavnetwork.host[4].ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar uavnetwork.host[4].ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar uavnetwork.host[4].ipv4.arp arpReplySent:count 2
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar uavnetwork.host[4].ipv4.arp arpReplySent:sum(packetBytes) 56
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar uavnetwork.host[4].ipv4.arp arpRequestSent:count 7
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar uavnetwork.host[4].ipv4.arp arpRequestSent:sum(packetBytes) 196
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar uavnetwork.host[4].ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar uavnetwork.host[4].ipv4.arp arpResolutionCompleted:count 35
+attr title "ARP completed resolutions, count"
+scalar uavnetwork.host[4].ipv4.arp arpResolutionInitiated:count 7
+attr title "ARP initiated resolutions, count"
+scalar uavnetwork.host[4].udp packetReceived:count 0
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, count"
+scalar uavnetwork.host[4].udp packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+scalar uavnetwork.host[4].udp packetSent:count 0
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, count"
+scalar uavnetwork.host[4].udp packetSent:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, sum(packetBytes)"
+scalar uavnetwork.host[4].udp passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed up, count"
+scalar uavnetwork.host[4].udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+scalar uavnetwork.host[4].udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+scalar uavnetwork.host[4].app[0] "Pings sent" 35
+scalar uavnetwork.host[4].app[0] "ping loss rate (%)" 0
+scalar uavnetwork.host[4].app[0] "ping out-of-order rate (%)" 0
+scalar uavnetwork.host[4].app[0] pingRxSeq:count 35
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar uavnetwork.host[4].app[0] pingTxSeq:count 35
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar uavnetwork.host[4].app[0] numOutOfOrderArrivals:last nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar uavnetwork.host[4].app[0] numLost:last nan
+attr interpolationmode none
+attr title "pings lost, last"
+statistic uavnetwork.host[4].app[0] rtt:histogram
+field count 35
+field mean 0.0014140973606857
+field stddev 0.0016668280831519
+field min 0.000827933668
+field max 0.010933587676
+field sum 0.049493407624
+field sqrsum 0.00016445123629109
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	0.0002	0
+bin	0.0004	0
+bin	0.0006	0
+bin	0.0008	10
+bin	0.001	10
+bin	0.0012	10
+bin	0.0014	4
+bin	0.0016	0
+bin	0.0018	0
+bin	0.002	0
+bin	0.0022	0
+bin	0.0024	0
+bin	0.0026	0
+bin	0.0028	0
+bin	0.003	0
+bin	0.0032	0
+bin	0.0034	0
+bin	0.0036	0
+bin	0.0038	0
+bin	0.004	0
+bin	0.0042	0
+bin	0.0044	0
+bin	0.0046	0
+bin	0.0048	0
+bin	0.005	0
+bin	0.0052	0
+bin	0.0054	0
+bin	0.0056	0
+bin	0.0058	0
+bin	0.006	0
+bin	0.0062	0
+bin	0.0064	0
+bin	0.0066	0
+bin	0.0068	0
+bin	0.007	0
+bin	0.0072	0
+bin	0.0074	0
+bin	0.0076	0
+bin	0.0078	0
+bin	0.008	0
+bin	0.0082	0
+bin	0.0084	0
+bin	0.0086	0
+bin	0.0088	0
+bin	0.009	0
+bin	0.0092	0
+bin	0.0094	0
+bin	0.0096	0
+bin	0.0098	0
+bin	0.01	0
+bin	0.0102	0
+bin	0.0104	0
+bin	0.0106	0
+bin	0.0108	1
+bin	0.011	0
+bin	0.0112	0
+bin	0.0114	0
+bin	0.0116	0
+bin	0.0118	0
+bin	0.012	0
+bin	0.0122	0
+bin	0.0124	0
+bin	0.0126	0
+bin	0.0128	0
+bin	0.013	0
+bin	0.0132	0
+bin	0.0134	0
+bin	0.0136	0
+scalar uavnetwork.host[5].lo[0].lo rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar uavnetwork.host[5].lo[0].lo rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar uavnetwork.host[5].lo[0].lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar uavnetwork.host[5].lo[0].lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar uavnetwork.host[5].wlan[0].mac rcvdPkFromLl:count 1414
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar uavnetwork.host[5].wlan[0].mac rcvdPkFromLl:sum(packetBytes) 92322
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar uavnetwork.host[5].wlan[0].mac sentDownPk:count 95
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar uavnetwork.host[5].wlan[0].mac sentDownPk:sum(packetBytes) 6156
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar uavnetwork.host[5].wlan[0].mac rcvdPkFromHl:count 52
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar uavnetwork.host[5].wlan[0].mac rcvdPkFromHl:sum(packetBytes) 3992
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar uavnetwork.host[5].wlan[0].mac passedUpPk:count 108
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar uavnetwork.host[5].wlan[0].mac passedUpPk:sum(packetBytes) 6660
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar uavnetwork.host[5].wlan[0].mac packetDropIncorrectlyReceived:count 9
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar uavnetwork.host[5].wlan[0].mac packetDropIncorrectlyReceived:sum(packetBytes) 700
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar uavnetwork.host[5].wlan[0].mac packetDropNotAddressedToUs:count 1254
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar uavnetwork.host[5].wlan[0].mac packetDropNotAddressedToUs:sum(packetBytes) 81336
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar uavnetwork.host[5].wlan[0].mac packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drop: queue overflow, count"
+scalar uavnetwork.host[5].wlan[0].mac packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drop: queue overflow, sum(packetBytes)"
+scalar uavnetwork.host[5].wlan[0].mac packetDropRetryLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drop: retry limit reached, count"
+scalar uavnetwork.host[5].wlan[0].mac packetDropRetryLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drop: retry limit reached, sum(packetBytes)"
+scalar uavnetwork.host[5].wlan[0].mac linkBroken:count 0
+attr interpolationmode none
+attr source linkBroken
+attr title "link break, count"
+statistic uavnetwork.host[5].wlan[0].radio minSnir:histogram
+field count 1414
+field mean 3561.392927687
+field stddev 3571.9054163549
+field min 0.23164198875574
+field max 23550.601253968
+field sum 5035809.5997494
+field sqrsum 35962268926.409
+attr source minimumSnir(packetSentToUpper)
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	13
+bin	400	34
+bin	800	145
+bin	1200	256
+bin	1600	177
+bin	2000	156
+bin	2400	120
+bin	2800	99
+bin	3200	46
+bin	3600	30
+bin	4000	24
+bin	4400	22
+bin	4800	18
+bin	5200	16
+bin	5600	9
+bin	6000	26
+bin	6400	18
+bin	6800	10
+bin	7200	11
+bin	7600	16
+bin	8000	13
+bin	8400	17
+bin	8800	16
+bin	9200	14
+bin	9600	8
+bin	10000	10
+bin	10400	6
+bin	10800	6
+bin	11200	7
+bin	11600	13
+bin	12000	6
+bin	12400	7
+bin	12800	2
+bin	13200	4
+bin	13600	10
+bin	14000	0
+bin	14400	6
+bin	14800	2
+bin	15200	3
+bin	15600	0
+bin	16000	4
+bin	16400	0
+bin	16800	0
+bin	17200	0
+bin	17600	0
+bin	18000	0
+bin	18400	4
+bin	18800	0
+bin	19200	0
+bin	19600	0
+bin	20000	0
+bin	20400	2
+bin	20800	0
+bin	21200	2
+bin	21600	0
+bin	22000	2
+bin	22400	0
+bin	22800	2
+bin	23200	2
+bin	23600	0
+statistic uavnetwork.host[5].wlan[0].radio packetErrorRate:histogram
+field count 1414
+field mean 0.0066328311433809
+field stddev 0.079240299522487
+field min 0
+field max 1
+field sum 9.3788232367405
+field sqrsum 8.9344705725211
+attr source packetErrorRate(packetSentToUpper)
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1404
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+bin	0.52	0
+bin	0.54	0
+bin	0.56	0
+bin	0.58	0
+bin	0.6	0
+bin	0.62	0
+bin	0.64	0
+bin	0.66	1
+bin	0.68	1
+bin	0.7	0
+bin	0.72	0
+bin	0.74	0
+bin	0.76	0
+bin	0.78	0
+bin	0.8	0
+bin	0.82	0
+bin	0.84	0
+bin	0.86	0
+bin	0.88	0
+bin	0.9	0
+bin	0.92	0
+bin	0.94	0
+bin	0.96	0
+bin	0.98	2
+bin	1	6
+bin	1.02	0
+statistic uavnetwork.host[5].wlan[0].radio bitErrorRate:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr source bitErrorRate(packetSentToUpper)
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic uavnetwork.host[5].wlan[0].radio symbolErrorRate:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr source symbolErrorRate(packetSentToUpper)
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar uavnetwork.host[5].wlan[0].radio transmissionState:count 380
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar uavnetwork.host[5].wlan[0].radio receptionState:count 3031
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar uavnetwork.host[5].wlan[0].radio radioMode:count 193
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic uavnetwork.host[5].wlan[0].radio radioChannel:histogram
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar uavnetwork.host[5].ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar uavnetwork.host[5].ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar uavnetwork.host[5].ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar uavnetwork.host[5].ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar uavnetwork.host[5].ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar uavnetwork.host[5].ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar uavnetwork.host[5].ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar uavnetwork.host[5].ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar uavnetwork.host[5].ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar uavnetwork.host[5].ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar uavnetwork.host[5].ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar uavnetwork.host[5].ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar uavnetwork.host[5].ipv4.arp arpReplySent:count 9
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar uavnetwork.host[5].ipv4.arp arpReplySent:sum(packetBytes) 252
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar uavnetwork.host[5].ipv4.arp arpRequestSent:count 0
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar uavnetwork.host[5].ipv4.arp arpRequestSent:sum(packetBytes) 0
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar uavnetwork.host[5].ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar uavnetwork.host[5].ipv4.arp arpResolutionCompleted:count 10
+attr title "ARP completed resolutions, count"
+scalar uavnetwork.host[5].ipv4.arp arpResolutionInitiated:count 0
+attr title "ARP initiated resolutions, count"
+scalar uavnetwork.host[5].udp packetReceived:count 0
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, count"
+scalar uavnetwork.host[5].udp packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+scalar uavnetwork.host[5].udp packetSent:count 0
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, count"
+scalar uavnetwork.host[5].udp packetSent:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, sum(packetBytes)"
+scalar uavnetwork.host[5].udp passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed up, count"
+scalar uavnetwork.host[5].udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+scalar uavnetwork.host[5].udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+scalar uavnetwork.host[5].app[0] "Pings sent" 34
+scalar uavnetwork.host[5].app[0] "ping loss rate (%)" 2.9411764705882
+scalar uavnetwork.host[5].app[0] "ping out-of-order rate (%)" 0
+scalar uavnetwork.host[5].app[0] pingRxSeq:count 33
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar uavnetwork.host[5].app[0] pingTxSeq:count 34
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar uavnetwork.host[5].app[0] numOutOfOrderArrivals:last nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar uavnetwork.host[5].app[0] numLost:last nan
+attr interpolationmode none
+attr title "pings lost, last"
+statistic uavnetwork.host[5].app[0] rtt:histogram
+field count 33
+field mean 0.001855587221697
+field stddev 0.0040157858966087
+field min 0.000886636378
+field max 0.024203523672
+field sum 0.061234378316
+field sqrsum 0.00062967489368856
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	0.0005	9
+bin	0.001	23
+bin	0.0015	0
+bin	0.002	0
+bin	0.0025	0
+bin	0.003	0
+bin	0.0035	0
+bin	0.004	0
+bin	0.0045	0
+bin	0.005	0
+bin	0.0055	0
+bin	0.006	0
+bin	0.0065	0
+bin	0.007	0
+bin	0.0075	0
+bin	0.008	0
+bin	0.0085	0
+bin	0.009	0
+bin	0.0095	0
+bin	0.01	0
+bin	0.0105	0
+bin	0.011	0
+bin	0.0115	0
+bin	0.012	0
+bin	0.0125	0
+bin	0.013	0
+bin	0.0135	0
+bin	0.014	0
+bin	0.0145	0
+bin	0.015	0
+bin	0.0155	0
+bin	0.016	0
+bin	0.0165	0
+bin	0.017	0
+bin	0.0175	0
+bin	0.018	0
+bin	0.0185	0
+bin	0.019	0
+bin	0.0195	0
+bin	0.02	0
+bin	0.0205	0
+bin	0.021	0
+bin	0.0215	0
+bin	0.022	0
+bin	0.0225	0
+bin	0.023	0
+bin	0.0235	0
+bin	0.024	1
+bin	0.0245	0
+bin	0.025	0
+bin	0.0255	0
+bin	0.026	0
+bin	0.0265	0
+bin	0.027	0
+bin	0.0275	0
+bin	0.028	0
+bin	0.0285	0
+bin	0.029	0
+bin	0.0295	0
+bin	0.03	0
+bin	0.0305	0
+scalar uavnetwork.host[6].lo[0].lo rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar uavnetwork.host[6].lo[0].lo rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar uavnetwork.host[6].lo[0].lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar uavnetwork.host[6].lo[0].lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar uavnetwork.host[6].wlan[0].mac rcvdPkFromLl:count 1411
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar uavnetwork.host[6].wlan[0].mac rcvdPkFromLl:sum(packetBytes) 92158
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar uavnetwork.host[6].wlan[0].mac sentDownPk:count 98
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar uavnetwork.host[6].wlan[0].mac sentDownPk:sum(packetBytes) 6288
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar uavnetwork.host[6].wlan[0].mac rcvdPkFromHl:count 54
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar uavnetwork.host[6].wlan[0].mac rcvdPkFromHl:sum(packetBytes) 4160
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar uavnetwork.host[6].wlan[0].mac passedUpPk:count 111
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar uavnetwork.host[6].wlan[0].mac passedUpPk:sum(packetBytes) 6956
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar uavnetwork.host[6].wlan[0].mac packetDropIncorrectlyReceived:count 10
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar uavnetwork.host[6].wlan[0].mac packetDropIncorrectlyReceived:sum(packetBytes) 804
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar uavnetwork.host[6].wlan[0].mac packetDropNotAddressedToUs:count 1246
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar uavnetwork.host[6].wlan[0].mac packetDropNotAddressedToUs:sum(packetBytes) 80674
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar uavnetwork.host[6].wlan[0].mac packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drop: queue overflow, count"
+scalar uavnetwork.host[6].wlan[0].mac packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drop: queue overflow, sum(packetBytes)"
+scalar uavnetwork.host[6].wlan[0].mac packetDropRetryLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drop: retry limit reached, count"
+scalar uavnetwork.host[6].wlan[0].mac packetDropRetryLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drop: retry limit reached, sum(packetBytes)"
+scalar uavnetwork.host[6].wlan[0].mac linkBroken:count 0
+attr interpolationmode none
+attr source linkBroken
+attr title "link break, count"
+statistic uavnetwork.host[6].wlan[0].radio minSnir:histogram
+field count 1411
+field mean 2417.3988190483
+field stddev 3291.4975572
+field min 0.20547060582665
+field max 27238.928351625
+field sum 3410949.7336771
+field sqrsum 23521504056.39
+attr source minimumSnir(packetSentToUpper)
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	11
+bin	500	202
+bin	1000	579
+bin	1500	222
+bin	2000	131
+bin	2500	105
+bin	3000	8
+bin	3500	10
+bin	4000	6
+bin	4500	4
+bin	5000	9
+bin	5500	12
+bin	6000	15
+bin	6500	7
+bin	7000	5
+bin	7500	6
+bin	8000	4
+bin	8500	2
+bin	9000	4
+bin	9500	4
+bin	10000	6
+bin	10500	7
+bin	11000	1
+bin	11500	3
+bin	12000	7
+bin	12500	10
+bin	13000	2
+bin	13500	1
+bin	14000	2
+bin	14500	2
+bin	15000	4
+bin	15500	0
+bin	16000	0
+bin	16500	4
+bin	17000	0
+bin	17500	0
+bin	18000	2
+bin	18500	0
+bin	19000	2
+bin	19500	0
+bin	20000	0
+bin	20500	0
+bin	21000	2
+bin	21500	0
+bin	22000	2
+bin	22500	0
+bin	23000	0
+bin	23500	2
+bin	24000	0
+bin	24500	0
+bin	25000	0
+bin	25500	2
+bin	26000	2
+bin	26500	0
+bin	27000	2
+bin	27500	0
+bin	28000	0
+bin	28500	0
+bin	29000	0
+bin	29500	0
+bin	30000	0
+bin	30500	0
+bin	31000	0
+bin	31500	0
+bin	32000	0
+bin	32500	0
+bin	33000	0
+bin	33500	0
+bin	34000	0
+bin	34500	0
+statistic uavnetwork.host[6].wlan[0].radio packetErrorRate:histogram
+field count 1411
+field mean 0.0070871720986089
+field stddev 0.083916236263979
+field min 0
+field max 1
+field sum 9.9999998311372
+field sqrsum 9.9999996590731
+attr source packetErrorRate(packetSentToUpper)
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1401
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+bin	0.52	0
+bin	0.54	0
+bin	0.56	0
+bin	0.58	0
+bin	0.6	0
+bin	0.62	0
+bin	0.64	0
+bin	0.66	0
+bin	0.68	0
+bin	0.7	0
+bin	0.72	0
+bin	0.74	0
+bin	0.76	0
+bin	0.78	0
+bin	0.8	0
+bin	0.82	0
+bin	0.84	0
+bin	0.86	0
+bin	0.88	0
+bin	0.9	0
+bin	0.92	0
+bin	0.94	0
+bin	0.96	0
+bin	0.98	3
+bin	1	7
+bin	1.02	0
+statistic uavnetwork.host[6].wlan[0].radio bitErrorRate:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr source bitErrorRate(packetSentToUpper)
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic uavnetwork.host[6].wlan[0].radio symbolErrorRate:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr source symbolErrorRate(packetSentToUpper)
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar uavnetwork.host[6].wlan[0].radio transmissionState:count 392
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar uavnetwork.host[6].wlan[0].radio receptionState:count 3031
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar uavnetwork.host[6].wlan[0].radio radioMode:count 199
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic uavnetwork.host[6].wlan[0].radio radioChannel:histogram
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar uavnetwork.host[6].ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar uavnetwork.host[6].ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar uavnetwork.host[6].ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar uavnetwork.host[6].ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar uavnetwork.host[6].ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar uavnetwork.host[6].ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar uavnetwork.host[6].ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar uavnetwork.host[6].ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar uavnetwork.host[6].ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar uavnetwork.host[6].ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar uavnetwork.host[6].ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar uavnetwork.host[6].ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar uavnetwork.host[6].ipv4.arp arpReplySent:count 4
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar uavnetwork.host[6].ipv4.arp arpReplySent:sum(packetBytes) 112
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar uavnetwork.host[6].ipv4.arp arpRequestSent:count 5
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar uavnetwork.host[6].ipv4.arp arpRequestSent:sum(packetBytes) 140
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar uavnetwork.host[6].ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar uavnetwork.host[6].ipv4.arp arpResolutionCompleted:count 23
+attr title "ARP completed resolutions, count"
+scalar uavnetwork.host[6].ipv4.arp arpResolutionInitiated:count 4
+attr title "ARP initiated resolutions, count"
+scalar uavnetwork.host[6].udp packetReceived:count 0
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, count"
+scalar uavnetwork.host[6].udp packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+scalar uavnetwork.host[6].udp packetSent:count 0
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, count"
+scalar uavnetwork.host[6].udp packetSent:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, sum(packetBytes)"
+scalar uavnetwork.host[6].udp passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed up, count"
+scalar uavnetwork.host[6].udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+scalar uavnetwork.host[6].udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+scalar uavnetwork.host[6].app[0] "Pings sent" 35
+scalar uavnetwork.host[6].app[0] "ping loss rate (%)" 0
+scalar uavnetwork.host[6].app[0] "ping out-of-order rate (%)" 0
+scalar uavnetwork.host[6].app[0] pingRxSeq:count 35
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar uavnetwork.host[6].app[0] pingTxSeq:count 35
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar uavnetwork.host[6].app[0] numOutOfOrderArrivals:last nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar uavnetwork.host[6].app[0] numLost:last nan
+attr interpolationmode none
+attr title "pings lost, last"
+statistic uavnetwork.host[6].app[0] rtt:histogram
+field count 35
+field mean 0.0031792106929429
+field stddev 0.0032643312220293
+field min 0.002136223261
+field max 0.021893907989
+field sum 0.111272374253
+field sqrsum 0.00071605750517619
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	0.0005	0
+bin	0.001	0
+bin	0.0015	0
+bin	0.002	10
+bin	0.0025	23
+bin	0.003	1
+bin	0.0035	0
+bin	0.004	0
+bin	0.0045	0
+bin	0.005	0
+bin	0.0055	0
+bin	0.006	0
+bin	0.0065	0
+bin	0.007	0
+bin	0.0075	0
+bin	0.008	0
+bin	0.0085	0
+bin	0.009	0
+bin	0.0095	0
+bin	0.01	0
+bin	0.0105	0
+bin	0.011	0
+bin	0.0115	0
+bin	0.012	0
+bin	0.0125	0
+bin	0.013	0
+bin	0.0135	0
+bin	0.014	0
+bin	0.0145	0
+bin	0.015	0
+bin	0.0155	0
+bin	0.016	0
+bin	0.0165	0
+bin	0.017	0
+bin	0.0175	0
+bin	0.018	0
+bin	0.0185	0
+bin	0.019	0
+bin	0.0195	0
+bin	0.02	0
+bin	0.0205	0
+bin	0.021	0
+bin	0.0215	1
+bin	0.022	0
+bin	0.0225	0
+bin	0.023	0
+bin	0.0235	0
+bin	0.024	0
+bin	0.0245	0
+bin	0.025	0
+bin	0.0255	0
+bin	0.026	0
+bin	0.0265	0
+bin	0.027	0
+scalar uavnetwork.host[7].lo[0].lo rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar uavnetwork.host[7].lo[0].lo rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar uavnetwork.host[7].lo[0].lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar uavnetwork.host[7].lo[0].lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar uavnetwork.host[7].wlan[0].mac rcvdPkFromLl:count 1414
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar uavnetwork.host[7].wlan[0].mac rcvdPkFromLl:sum(packetBytes) 92516
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar uavnetwork.host[7].wlan[0].mac sentDownPk:count 94
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar uavnetwork.host[7].wlan[0].mac sentDownPk:sum(packetBytes) 5932
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar uavnetwork.host[7].wlan[0].mac rcvdPkFromHl:count 49
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar uavnetwork.host[7].wlan[0].mac rcvdPkFromHl:sum(packetBytes) 3880
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar uavnetwork.host[7].wlan[0].mac passedUpPk:count 109
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar uavnetwork.host[7].wlan[0].mac passedUpPk:sum(packetBytes) 6804
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar uavnetwork.host[7].wlan[0].mac packetDropIncorrectlyReceived:count 11
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar uavnetwork.host[7].wlan[0].mac packetDropIncorrectlyReceived:sum(packetBytes) 860
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar uavnetwork.host[7].wlan[0].mac packetDropNotAddressedToUs:count 1255
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar uavnetwork.host[7].wlan[0].mac packetDropNotAddressedToUs:sum(packetBytes) 81254
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar uavnetwork.host[7].wlan[0].mac packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drop: queue overflow, count"
+scalar uavnetwork.host[7].wlan[0].mac packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drop: queue overflow, sum(packetBytes)"
+scalar uavnetwork.host[7].wlan[0].mac packetDropRetryLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drop: retry limit reached, count"
+scalar uavnetwork.host[7].wlan[0].mac packetDropRetryLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drop: retry limit reached, sum(packetBytes)"
+scalar uavnetwork.host[7].wlan[0].mac linkBroken:count 0
+attr interpolationmode none
+attr source linkBroken
+attr title "link break, count"
+statistic uavnetwork.host[7].wlan[0].radio minSnir:histogram
+field count 1414
+field mean 1771.1616364772
+field stddev 1369.1160544108
+field min 0.32956939759001
+field max 10668.414260807
+field sum 2504422.5539788
+field sqrsum 7084375651.7748
+attr source minimumSnir(packetSentToUpper)
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	11
+bin	200	36
+bin	400	112
+bin	600	139
+bin	800	98
+bin	1000	24
+bin	1200	52
+bin	1400	91
+bin	1600	228
+bin	1800	194
+bin	2000	68
+bin	2200	153
+bin	2400	152
+bin	2600	0
+bin	2800	2
+bin	3000	2
+bin	3200	2
+bin	3400	0
+bin	3600	2
+bin	3800	2
+bin	4000	2
+bin	4200	0
+bin	4400	2
+bin	4600	1
+bin	4800	1
+bin	5000	2
+bin	5200	0
+bin	5400	2
+bin	5600	0
+bin	5800	2
+bin	6000	2
+bin	6200	0
+bin	6400	2
+bin	6600	2
+bin	6800	0
+bin	7000	0
+bin	7200	2
+bin	7400	2
+bin	7600	0
+bin	7800	0
+bin	8000	2
+bin	8200	2
+bin	8400	0
+bin	8600	0
+bin	8800	2
+bin	9000	0
+bin	9200	4
+bin	9400	0
+bin	9600	0
+bin	9800	2
+bin	10000	2
+bin	10200	2
+bin	10400	4
+bin	10600	4
+bin	10800	0
+bin	11000	0
+bin	11200	0
+bin	11400	0
+bin	11600	0
+bin	11800	0
+bin	12000	0
+bin	12200	0
+bin	12400	0
+bin	12600	0
+bin	12800	0
+bin	13000	0
+bin	13200	0
+bin	13400	0
+statistic uavnetwork.host[7].wlan[0].radio packetErrorRate:histogram
+field count 1414
+field mean 0.0075998323393902
+field stddev 0.086001455056113
+field min 0
+field max 1
+field sum 10.746162927898
+field sqrsum 10.532570670553
+attr source packetErrorRate(packetSentToUpper)
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1403
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+bin	0.52	0
+bin	0.54	0
+bin	0.56	0
+bin	0.58	0
+bin	0.6	0
+bin	0.62	0
+bin	0.64	0
+bin	0.66	0
+bin	0.68	0
+bin	0.7	0
+bin	0.72	0
+bin	0.74	0
+bin	0.76	0
+bin	0.78	0
+bin	0.8	1
+bin	0.82	0
+bin	0.84	0
+bin	0.86	0
+bin	0.88	0
+bin	0.9	0
+bin	0.92	0
+bin	0.94	1
+bin	0.96	0
+bin	0.98	3
+bin	1	6
+bin	1.02	0
+statistic uavnetwork.host[7].wlan[0].radio bitErrorRate:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr source bitErrorRate(packetSentToUpper)
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic uavnetwork.host[7].wlan[0].radio symbolErrorRate:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr source symbolErrorRate(packetSentToUpper)
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar uavnetwork.host[7].wlan[0].radio transmissionState:count 376
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar uavnetwork.host[7].wlan[0].radio receptionState:count 3031
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar uavnetwork.host[7].wlan[0].radio radioMode:count 191
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic uavnetwork.host[7].wlan[0].radio radioChannel:histogram
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar uavnetwork.host[7].ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar uavnetwork.host[7].ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar uavnetwork.host[7].ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar uavnetwork.host[7].ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar uavnetwork.host[7].ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar uavnetwork.host[7].ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar uavnetwork.host[7].ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar uavnetwork.host[7].ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar uavnetwork.host[7].ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar uavnetwork.host[7].ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar uavnetwork.host[7].ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar uavnetwork.host[7].ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar uavnetwork.host[7].ipv4.arp arpReplySent:count 4
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar uavnetwork.host[7].ipv4.arp arpReplySent:sum(packetBytes) 112
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar uavnetwork.host[7].ipv4.arp arpRequestSent:count 2
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar uavnetwork.host[7].ipv4.arp arpRequestSent:sum(packetBytes) 56
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar uavnetwork.host[7].ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar uavnetwork.host[7].ipv4.arp arpResolutionCompleted:count 9
+attr title "ARP completed resolutions, count"
+scalar uavnetwork.host[7].ipv4.arp arpResolutionInitiated:count 2
+attr title "ARP initiated resolutions, count"
+scalar uavnetwork.host[7].udp packetReceived:count 0
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, count"
+scalar uavnetwork.host[7].udp packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+scalar uavnetwork.host[7].udp packetSent:count 0
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, count"
+scalar uavnetwork.host[7].udp packetSent:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, sum(packetBytes)"
+scalar uavnetwork.host[7].udp passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed up, count"
+scalar uavnetwork.host[7].udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+scalar uavnetwork.host[7].udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+scalar uavnetwork.host[7].app[0] "Pings sent" 34
+scalar uavnetwork.host[7].app[0] "ping loss rate (%)" 0
+scalar uavnetwork.host[7].app[0] "ping out-of-order rate (%)" 0
+scalar uavnetwork.host[7].app[0] pingRxSeq:count 34
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar uavnetwork.host[7].app[0] pingTxSeq:count 34
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar uavnetwork.host[7].app[0] numOutOfOrderArrivals:last nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar uavnetwork.host[7].app[0] numLost:last nan
+attr interpolationmode none
+attr title "pings lost, last"
+statistic uavnetwork.host[7].app[0] rtt:histogram
+field count 34
+field mean 0.026121233131882
+field stddev 0.14515908622626
+field min 0.000865972475
+field max 0.847639645723
+field sum 0.888121926484
+field sqrsum 0.71854713025462
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	0	33
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+bin	0.52	0
+bin	0.54	0
+bin	0.56	0
+bin	0.58	0
+bin	0.6	0
+bin	0.62	0
+bin	0.64	0
+bin	0.66	0
+bin	0.68	0
+bin	0.7	0
+bin	0.72	0
+bin	0.74	0
+bin	0.76	0
+bin	0.78	0
+bin	0.8	0
+bin	0.82	0
+bin	0.84	1
+bin	0.86	0
+bin	0.88	0
+bin	0.9	0
+bin	0.92	0
+bin	0.94	0
+bin	0.96	0
+bin	0.98	0
+bin	1	0
+bin	1.02	0
+bin	1.04	0
+bin	1.06	0
+scalar uavnetwork.host[8].lo[0].lo rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar uavnetwork.host[8].lo[0].lo rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar uavnetwork.host[8].lo[0].lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar uavnetwork.host[8].lo[0].lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar uavnetwork.host[8].wlan[0].mac rcvdPkFromLl:count 1413
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar uavnetwork.host[8].wlan[0].mac rcvdPkFromLl:sum(packetBytes) 92360
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar uavnetwork.host[8].wlan[0].mac sentDownPk:count 95
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar uavnetwork.host[8].wlan[0].mac sentDownPk:sum(packetBytes) 6068
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar uavnetwork.host[8].wlan[0].mac rcvdPkFromHl:count 50
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar uavnetwork.host[8].wlan[0].mac rcvdPkFromHl:sum(packetBytes) 3968
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar uavnetwork.host[8].wlan[0].mac passedUpPk:count 110
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar uavnetwork.host[8].wlan[0].mac passedUpPk:sum(packetBytes) 6852
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar uavnetwork.host[8].wlan[0].mac packetDropIncorrectlyReceived:count 11
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar uavnetwork.host[8].wlan[0].mac packetDropIncorrectlyReceived:sum(packetBytes) 868
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar uavnetwork.host[8].wlan[0].mac packetDropNotAddressedToUs:count 1251
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar uavnetwork.host[8].wlan[0].mac packetDropNotAddressedToUs:sum(packetBytes) 80986
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar uavnetwork.host[8].wlan[0].mac packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drop: queue overflow, count"
+scalar uavnetwork.host[8].wlan[0].mac packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drop: queue overflow, sum(packetBytes)"
+scalar uavnetwork.host[8].wlan[0].mac packetDropRetryLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drop: retry limit reached, count"
+scalar uavnetwork.host[8].wlan[0].mac packetDropRetryLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drop: retry limit reached, sum(packetBytes)"
+scalar uavnetwork.host[8].wlan[0].mac linkBroken:count 0
+attr interpolationmode none
+attr source linkBroken
+attr title "link break, count"
+statistic uavnetwork.host[8].wlan[0].radio minSnir:histogram
+field count 1413
+field mean 1201.7434613892
+field stddev 1288.0571132859
+field min 0.35794613536602
+field max 13314.446129763
+field sum 1698063.510943
+field sqrsum 4383273392.7452
+attr source minimumSnir(packetSentToUpper)
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	14
+bin	200	0
+bin	400	266
+bin	600	392
+bin	800	238
+bin	1000	158
+bin	1200	106
+bin	1400	62
+bin	1600	14
+bin	1800	12
+bin	2000	8
+bin	2200	16
+bin	2400	16
+bin	2600	10
+bin	2800	6
+bin	3000	12
+bin	3200	27
+bin	3400	4
+bin	3600	0
+bin	3800	4
+bin	4000	0
+bin	4200	3
+bin	4400	2
+bin	4600	2
+bin	4800	2
+bin	5000	0
+bin	5200	0
+bin	5400	4
+bin	5600	0
+bin	5800	3
+bin	6000	0
+bin	6200	0
+bin	6400	4
+bin	6600	15
+bin	6800	1
+bin	7000	0
+bin	7200	2
+bin	7400	1
+bin	7600	0
+bin	7800	1
+bin	8000	0
+bin	8200	0
+bin	8400	2
+bin	8600	0
+bin	8800	0
+bin	9000	0
+bin	9200	0
+bin	9400	2
+bin	9600	0
+bin	9800	0
+bin	10000	0
+bin	10200	0
+bin	10400	0
+bin	10600	0
+bin	10800	0
+bin	11000	0
+bin	11200	2
+bin	11400	0
+bin	11600	0
+bin	11800	0
+bin	12000	0
+bin	12200	0
+bin	12400	0
+bin	12600	0
+bin	12800	0
+bin	13000	0
+bin	13200	2
+bin	13400	0
+statistic uavnetwork.host[8].wlan[0].radio packetErrorRate:histogram
+field count 1413
+field mean 0.0082081456235306
+field stddev 0.088902037011767
+field min 0
+field max 1
+field sum 11.598109766049
+field sqrsum 11.255042898914
+attr source packetErrorRate(packetSentToUpper)
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1400
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	1
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	1
+bin	0.5	0
+bin	0.52	0
+bin	0.54	0
+bin	0.56	0
+bin	0.58	0
+bin	0.6	0
+bin	0.62	0
+bin	0.64	0
+bin	0.66	0
+bin	0.68	0
+bin	0.7	0
+bin	0.72	0
+bin	0.74	0
+bin	0.76	0
+bin	0.78	0
+bin	0.8	0
+bin	0.82	0
+bin	0.84	0
+bin	0.86	0
+bin	0.88	0
+bin	0.9	0
+bin	0.92	0
+bin	0.94	0
+bin	0.96	0
+bin	0.98	3
+bin	1	8
+bin	1.02	0
+statistic uavnetwork.host[8].wlan[0].radio bitErrorRate:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr source bitErrorRate(packetSentToUpper)
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic uavnetwork.host[8].wlan[0].radio symbolErrorRate:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr source symbolErrorRate(packetSentToUpper)
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar uavnetwork.host[8].wlan[0].radio transmissionState:count 380
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar uavnetwork.host[8].wlan[0].radio receptionState:count 3031
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar uavnetwork.host[8].wlan[0].radio radioMode:count 193
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic uavnetwork.host[8].wlan[0].radio radioChannel:histogram
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar uavnetwork.host[8].ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar uavnetwork.host[8].ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar uavnetwork.host[8].ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar uavnetwork.host[8].ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar uavnetwork.host[8].ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar uavnetwork.host[8].ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar uavnetwork.host[8].ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar uavnetwork.host[8].ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar uavnetwork.host[8].ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar uavnetwork.host[8].ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar uavnetwork.host[8].ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar uavnetwork.host[8].ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar uavnetwork.host[8].ipv4.arp arpReplySent:count 4
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar uavnetwork.host[8].ipv4.arp arpReplySent:sum(packetBytes) 112
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar uavnetwork.host[8].ipv4.arp arpRequestSent:count 2
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar uavnetwork.host[8].ipv4.arp arpRequestSent:sum(packetBytes) 56
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar uavnetwork.host[8].ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar uavnetwork.host[8].ipv4.arp arpResolutionCompleted:count 15
+attr title "ARP completed resolutions, count"
+scalar uavnetwork.host[8].ipv4.arp arpResolutionInitiated:count 2
+attr title "ARP initiated resolutions, count"
+scalar uavnetwork.host[8].udp packetReceived:count 0
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, count"
+scalar uavnetwork.host[8].udp packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+scalar uavnetwork.host[8].udp packetSent:count 0
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, count"
+scalar uavnetwork.host[8].udp packetSent:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, sum(packetBytes)"
+scalar uavnetwork.host[8].udp passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed up, count"
+scalar uavnetwork.host[8].udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+scalar uavnetwork.host[8].udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+scalar uavnetwork.host[8].app[0] "Pings sent" 35
+scalar uavnetwork.host[8].app[0] "ping loss rate (%)" 0
+scalar uavnetwork.host[8].app[0] "ping out-of-order rate (%)" 0
+scalar uavnetwork.host[8].app[0] pingRxSeq:count 35
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar uavnetwork.host[8].app[0] pingTxSeq:count 35
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar uavnetwork.host[8].app[0] numOutOfOrderArrivals:last nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar uavnetwork.host[8].app[0] numLost:last nan
+attr interpolationmode none
+attr title "pings lost, last"
+statistic uavnetwork.host[8].app[0] rtt:histogram
+field count 35
+field mean 0.0015817497728
+field stddev 0.0024618301628958
+field min 0.000829180608
+field max 0.015687186835
+field sum 0.055361242048
+field sqrsum 0.00029362829556343
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	0.0002	0
+bin	0.0004	0
+bin	0.0006	0
+bin	0.0008	8
+bin	0.001	7
+bin	0.0012	14
+bin	0.0014	5
+bin	0.0016	0
+bin	0.0018	0
+bin	0.002	0
+bin	0.0022	0
+bin	0.0024	0
+bin	0.0026	0
+bin	0.0028	0
+bin	0.003	0
+bin	0.0032	0
+bin	0.0034	0
+bin	0.0036	0
+bin	0.0038	0
+bin	0.004	0
+bin	0.0042	0
+bin	0.0044	0
+bin	0.0046	0
+bin	0.0048	0
+bin	0.005	0
+bin	0.0052	0
+bin	0.0054	0
+bin	0.0056	0
+bin	0.0058	0
+bin	0.006	0
+bin	0.0062	0
+bin	0.0064	0
+bin	0.0066	0
+bin	0.0068	0
+bin	0.007	0
+bin	0.0072	0
+bin	0.0074	0
+bin	0.0076	0
+bin	0.0078	0
+bin	0.008	0
+bin	0.0082	0
+bin	0.0084	0
+bin	0.0086	0
+bin	0.0088	0
+bin	0.009	0
+bin	0.0092	0
+bin	0.0094	0
+bin	0.0096	0
+bin	0.0098	0
+bin	0.01	0
+bin	0.0102	0
+bin	0.0104	0
+bin	0.0106	0
+bin	0.0108	0
+bin	0.011	0
+bin	0.0112	0
+bin	0.0114	0
+bin	0.0116	0
+bin	0.0118	0
+bin	0.012	0
+bin	0.0122	0
+bin	0.0124	0
+bin	0.0126	0
+bin	0.0128	0
+bin	0.013	0
+bin	0.0132	0
+bin	0.0134	0
+bin	0.0136	0
+bin	0.0138	0
+bin	0.014	0
+bin	0.0142	0
+bin	0.0144	0
+bin	0.0146	0
+bin	0.0148	0
+bin	0.015	0
+bin	0.0152	0
+bin	0.0154	0
+bin	0.0156	1
+bin	0.0158	0
+bin	0.016	0
+bin	0.0162	0
+bin	0.0164	0
+bin	0.0166	0
+bin	0.0168	0
+bin	0.017	0
+bin	0.0172	0
+bin	0.0174	0
+bin	0.0176	0
+bin	0.0178	0
+bin	0.018	0
+bin	0.0182	0
+bin	0.0184	0
+bin	0.0186	0
+bin	0.0188	0
+bin	0.019	0
+bin	0.0192	0
+bin	0.0194	0
+bin	0.0196	0
+scalar uavnetwork.host[9].lo[0].lo rcvdPkFromHl:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar uavnetwork.host[9].lo[0].lo rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar uavnetwork.host[9].lo[0].lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar uavnetwork.host[9].lo[0].lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar uavnetwork.host[9].wlan[0].mac rcvdPkFromLl:count 1413
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar uavnetwork.host[9].wlan[0].mac rcvdPkFromLl:sum(packetBytes) 92286
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar uavnetwork.host[9].wlan[0].mac sentDownPk:count 95
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar uavnetwork.host[9].wlan[0].mac sentDownPk:sum(packetBytes) 6146
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar uavnetwork.host[9].wlan[0].mac rcvdPkFromHl:count 52
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar uavnetwork.host[9].wlan[0].mac rcvdPkFromHl:sum(packetBytes) 4088
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar uavnetwork.host[9].wlan[0].mac passedUpPk:count 109
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar uavnetwork.host[9].wlan[0].mac passedUpPk:sum(packetBytes) 6860
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar uavnetwork.host[9].wlan[0].mac packetDropIncorrectlyReceived:count 11
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar uavnetwork.host[9].wlan[0].mac packetDropIncorrectlyReceived:sum(packetBytes) 892
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar uavnetwork.host[9].wlan[0].mac packetDropNotAddressedToUs:count 1251
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, count"
+scalar uavnetwork.host[9].wlan[0].mac packetDropNotAddressedToUs:sum(packetBytes) 80894
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drop: not addressed to us, sum(packetBytes)"
+scalar uavnetwork.host[9].wlan[0].mac packetDropQueueOverflow:count 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drop: queue overflow, count"
+scalar uavnetwork.host[9].wlan[0].mac packetDropQueueOverflow:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "packet drop: queue overflow, sum(packetBytes)"
+scalar uavnetwork.host[9].wlan[0].mac packetDropRetryLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drop: retry limit reached, count"
+scalar uavnetwork.host[9].wlan[0].mac packetDropRetryLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsRetryLimitReached(packetDropped)
+attr title "packet drop: retry limit reached, sum(packetBytes)"
+scalar uavnetwork.host[9].wlan[0].mac linkBroken:count 0
+attr interpolationmode none
+attr source linkBroken
+attr title "link break, count"
+statistic uavnetwork.host[9].wlan[0].radio minSnir:histogram
+field count 1413
+field mean 2146.9359395732
+field stddev 3119.4227829043
+field min 0.88432709793283
+field max 27238.415933793
+field sum 3033620.4826169
+field sqrsum 20252876321.041
+attr source minimumSnir(packetSentToUpper)
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	13
+bin	400	66
+bin	800	573
+bin	1200	187
+bin	1600	126
+bin	2000	106
+bin	2400	159
+bin	2800	75
+bin	3200	38
+bin	3600	2
+bin	4000	0
+bin	4400	2
+bin	4800	2
+bin	5200	0
+bin	5600	2
+bin	6000	0
+bin	6400	2
+bin	6800	0
+bin	7200	2
+bin	7600	0
+bin	8000	0
+bin	8400	2
+bin	8800	0
+bin	9200	0
+bin	9600	2
+bin	10000	0
+bin	10400	0
+bin	10800	1
+bin	11200	1
+bin	11600	2
+bin	12000	16
+bin	12400	2
+bin	12800	0
+bin	13200	5
+bin	13600	0
+bin	14000	2
+bin	14400	0
+bin	14800	2
+bin	15200	0
+bin	15600	0
+bin	16000	0
+bin	16400	4
+bin	16800	0
+bin	17200	0
+bin	17600	3
+bin	18000	0
+bin	18400	2
+bin	18800	2
+bin	19200	0
+bin	19600	0
+bin	20000	0
+bin	20400	0
+bin	20800	2
+bin	21200	0
+bin	21600	0
+bin	22000	2
+bin	22400	0
+bin	22800	0
+bin	23200	0
+bin	23600	2
+bin	24000	0
+bin	24400	0
+bin	24800	0
+bin	25200	2
+bin	25600	0
+bin	26000	2
+bin	26400	0
+bin	26800	0
+bin	27200	2
+bin	27600	0
+statistic uavnetwork.host[9].wlan[0].radio packetErrorRate:histogram
+field count 1413
+field mean 0.0075984978176784
+field stddev 0.085475111842302
+field min 0
+field max 1
+field sum 10.73667741638
+field sqrsum 10.397647199087
+attr source packetErrorRate(packetSentToUpper)
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1401
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	1
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+bin	0.52	0
+bin	0.54	0
+bin	0.56	0
+bin	0.58	0
+bin	0.6	0
+bin	0.62	0
+bin	0.64	0
+bin	0.66	0
+bin	0.68	1
+bin	0.7	0
+bin	0.72	0
+bin	0.74	0
+bin	0.76	0
+bin	0.78	0
+bin	0.8	0
+bin	0.82	0
+bin	0.84	0
+bin	0.86	0
+bin	0.88	0
+bin	0.9	0
+bin	0.92	0
+bin	0.94	1
+bin	0.96	0
+bin	0.98	2
+bin	1	7
+bin	1.02	0
+statistic uavnetwork.host[9].wlan[0].radio bitErrorRate:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr source bitErrorRate(packetSentToUpper)
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+statistic uavnetwork.host[9].wlan[0].radio symbolErrorRate:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr source symbolErrorRate(packetSentToUpper)
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar uavnetwork.host[9].wlan[0].radio transmissionState:count 380
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar uavnetwork.host[9].wlan[0].radio receptionState:count 3030
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar uavnetwork.host[9].wlan[0].radio radioMode:count 193
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic uavnetwork.host[9].wlan[0].radio radioChannel:histogram
+field count 1
+field mean 0
+field stddev nan
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar uavnetwork.host[9].ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar uavnetwork.host[9].ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar uavnetwork.host[9].ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar uavnetwork.host[9].ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar uavnetwork.host[9].ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar uavnetwork.host[9].ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar uavnetwork.host[9].ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar uavnetwork.host[9].ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar uavnetwork.host[9].ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar uavnetwork.host[9].ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar uavnetwork.host[9].ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar uavnetwork.host[9].ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+scalar uavnetwork.host[9].ipv4.arp arpReplySent:count 2
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar uavnetwork.host[9].ipv4.arp arpReplySent:sum(packetBytes) 56
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar uavnetwork.host[9].ipv4.arp arpRequestSent:count 5
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar uavnetwork.host[9].ipv4.arp arpRequestSent:sum(packetBytes) 140
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar uavnetwork.host[9].ipv4.arp arpResolutionFailed:count 0
+attr title "ARP failed resolutions, count"
+scalar uavnetwork.host[9].ipv4.arp arpResolutionCompleted:count 17
+attr title "ARP completed resolutions, count"
+scalar uavnetwork.host[9].ipv4.arp arpResolutionInitiated:count 5
+attr title "ARP initiated resolutions, count"
+scalar uavnetwork.host[9].udp packetReceived:count 0
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, count"
+scalar uavnetwork.host[9].udp packetReceived:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+scalar uavnetwork.host[9].udp packetSent:count 0
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, count"
+scalar uavnetwork.host[9].udp packetSent:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, sum(packetBytes)"
+scalar uavnetwork.host[9].udp passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed up, count"
+scalar uavnetwork.host[9].udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+scalar uavnetwork.host[9].udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+scalar uavnetwork.host[9].app[0] "Pings sent" 35
+scalar uavnetwork.host[9].app[0] "ping loss rate (%)" 0
+scalar uavnetwork.host[9].app[0] "ping out-of-order rate (%)" 0
+scalar uavnetwork.host[9].app[0] pingRxSeq:count 35
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar uavnetwork.host[9].app[0] pingTxSeq:count 35
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar uavnetwork.host[9].app[0] numOutOfOrderArrivals:last nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar uavnetwork.host[9].app[0] numLost:last nan
+attr interpolationmode none
+attr title "pings lost, last"
+statistic uavnetwork.host[9].app[0] rtt:histogram
+field count 35
+field mean 0.0070943667509143
+field stddev 0.033536423780097
+field min 0.000887987223
+field max 0.1998175739
+field sum 0.248302836282
+field sqrsum 0.040001069864456
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	0	34
+bin	0.005	0
+bin	0.01	0
+bin	0.015	0
+bin	0.02	0
+bin	0.025	0
+bin	0.03	0
+bin	0.035	0
+bin	0.04	0
+bin	0.045	0
+bin	0.05	0
+bin	0.055	0
+bin	0.06	0
+bin	0.065	0
+bin	0.07	0
+bin	0.075	0
+bin	0.08	0
+bin	0.085	0
+bin	0.09	0
+bin	0.095	0
+bin	0.1	0
+bin	0.105	0
+bin	0.11	0
+bin	0.115	0
+bin	0.12	0
+bin	0.125	0
+bin	0.13	0
+bin	0.135	0
+bin	0.14	0
+bin	0.145	0
+bin	0.15	0
+bin	0.155	0
+bin	0.16	0
+bin	0.165	0
+bin	0.17	0
+bin	0.175	0
+bin	0.18	0
+bin	0.185	0
+bin	0.19	0
+bin	0.195	1
+bin	0.2	0
+bin	0.205	0
+bin	0.21	0
+bin	0.215	0
+bin	0.22	0
+bin	0.225	0
+bin	0.23	0
+bin	0.235	0
+bin	0.24	0
+bin	0.245	0
+bin	0.25	0
+
