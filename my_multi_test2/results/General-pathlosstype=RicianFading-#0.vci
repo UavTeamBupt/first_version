@@ -1,0 +1,497 @@
+file 22569 1608820843                                           
+version 2
+run General-2-20201224-22:40:17-20372
+attr configname General
+attr datetime 20201224-22:40:17
+attr experiment General
+attr inifile multi_test_real.ini
+attr iterationvars "$pathlosstype=\"RicianFading\""
+attr iterationvarsf pathlosstype=RicianFading-
+attr measurement "$pathlosstype=\"RicianFading\""
+attr network myuav.UAVNetwork_Multi
+attr processid 20372
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 2
+attr seedset 2
+itervar pathlosstype "\"RicianFading\""
+param *.configurator.addStaticRoutes false
+param **.arp.typename "\"GlobalArp\""
+param **.basicHosts[*].forwarding false
+param **.basicHosts[*].multicastForwarding false
+param **.hostRouters[*].forwarding true
+param **.hostRouters[*].multicastForwarding true
+param *.numHosts 30
+param *.configurator.config "xmldoc(\"multi_test.xml\")"
+param *.configurator.dumpAddresses true
+param *.configurator.dumpTopology true
+param *.configurator.dumpLinks true
+param *.configurator.dumpRoutes true
+param *.configurator.dumpConfig "\"multi_test_dump.xml\""
+param *.visualizer.osgVisualizer.typename "\"IntegratedOsgVisualizer\""
+param *.visualizer.osgVisualizer.sceneVisualizer.clearColor "\"skyblue\""
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneImage "\"device/desert\""
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneImageSize 2000m
+param *.visualizer.osgVisualizer.sceneVisualizer.axisLength 500m
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneMinX 0m
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneMinY 0m
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneMinZ 0m
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneMaxX 2000m
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneMaxY 2000m
+param *.visualizer.osgVisualizer.sceneVisualizer.sceneMaxZ 1000m
+param *.visualizer.*.networkRouteVisualizer.displayRoutes true
+param *.visualizer.*.networkRouteVisualizer.packetFilter "\"ping*\""
+param *.visualizer.*.networkRouteVisualizer.lineWidth 10
+param *.visualizer.*.networkRouteVisualizer.lineShift 0
+param *.visualizer.*.mobilityVisualizer.displayMovementTrails true
+param *.visualizer.*.mobilityVisualizer.animationSpeed 1
+param *.hostRouters[*].wlan[0].typename "\"WirelessInterface\""
+param *.basicHosts[*].wlan[0].typename "\"WirelessInterface\""
+param *.hostRouters[*].wlan[0].mac.typename "\"CsmaCaMac\""
+param *.hostRouters[*].wlan[0].mac.ackTimeout 300us
+param *.basicHosts[*].wlan[0].mac.typename "\"CsmaCaMac\""
+param *.basicHosts[*].wlan[0].mac.ackTimeout 300us
+param **.wlan[*].queue.typename "\"DropTailQueue\""
+param *.hostRouters[*].wlan[0].mac.maxQueueSize 20000
+param *.basicHosts[*].wlan[0].mac.maxQueueSize 10000
+param *.radioMedium.typename "\"ApskScalarRadioMedium\""
+param *.radioMedium.backgroundNoise.power -90dBm
+param *.radioMedium.mediumLimitCache.carrierFrequency 2GHz
+param *.hostRouters[*].wlan[0].radio.typename "\"ApskScalarRadio\""
+param *.hostRouters[*].wlan[0].radio.carrierFrequency 2GHz
+param *.basicHosts[*].wlan[0].radio.typename "\"ApskScalarRadio\""
+param *.basicHosts[*].wlan[0].radio.carrierFrequency 2GHz
+param **.ignorePartialInterference true
+param *.hostRouters[*].wlan[0].radio.bandwidth 10MHz
+param *.hostRouters[*].wlan[0].radio.transmitter.preambleDuration 10us
+param *.hostRouters[*].wlan[0].radio.transmitter.headerLength 8b
+param *.basicHosts[*].wlan[0].radio.bandwidth 10MHz
+param *.basicHosts[*].wlan[0].radio.transmitter.preambleDuration 10us
+param *.basicHosts[*].wlan[0].radio.transmitter.headerLength 8b
+param *.hostRouters[*].wlan[0].radio.receiver.sensitivity -85dBm
+param *.hostRouters[*].wlan[0].radio.receiver.energyDetection -85dBm
+param *.hostRouters[*].wlan[0].radio.receiver.snirThreshold 4dB
+param *.basicHosts[*].wlan[0].radio.receiver.sensitivity -85dBm
+param *.basicHosts[*].wlan[0].radio.receiver.energyDetection -85dBm
+param *.basicHosts[*].wlan[0].radio.receiver.snirThreshold 4dB
+param **.hostRouters[*].**.bitrate 1Mbps
+param **.basicHosts[*].**.bitrate 1Mbps
+param **.hostRouters[*].wlan[*].radio.transmitter.power 15mW
+param **.basicHosts[*].wlan[*].radio.transmitter.power 5mW
+param *.radioMedium.pathLoss.typename "\"RicianFading\""
+param *.physicalEnvironment.coordinateSystemModule "\"coordinateSystem\""
+param *.*.mobility.coordinateSystemModule "\"coordinateSystem\""
+param *.physicalEnvironment.config "xmldoc(\"obstacles.xml\")"
+param *.radioMedium.obstacleLoss.typename "\"DielectricObstacleLoss\""
+param **.hostRouters[*].app[*].typename "\"PingApp\""
+param **.basicHosts[*].app[*].typename "\"PingApp\""
+param *.hostRouters[*].numApps 1
+param *.basicHosts[*].numApps 1
+param **.basicHosts[*].app[*].count 1
+param **.basicHosts[*].app[*].continuous true
+param **.hostRouters[*].app[*].count 1
+param **.hostRouters[*].app[*].continuous true
+param **.hostRouters[0].app[*].destAddr "\"hostRouters[1] hostRouters[2] hostRouters[3] hostRouters[4]\""
+param **.hostRouters[1].app[*].destAddr "\"hostRouters[0] hostRouters[2] hostRouters[3] hostRouters[4]\""
+param **.hostRouters[2].app[*].destAddr "\"hostRouters[0] hostRouters[1] hostRouters[3] hostRouters[4]\""
+param **.hostRouters[3].app[*].destAddr "\"hostRouters[0] hostRouters[1] hostRouters[2] hostRouters[4]\""
+param **.hostRouters[4].app[*].destAddr "\"hostRouters[0] hostRouters[1] hostRouters[2] hostRouters[3]\""
+param **.hostRouters[*].app[*].startTime uniform(10s,15s)
+param **.hostRouters[*].app[*].printPing true
+param **.basicHosts[*].app[*].destAddr "\"*\""
+param **.basicHosts[*].app[*].startTime uniform(5s,8s)
+param **.basicHosts[*].app[*].hopLimit 1
+param **.basicHosts[*].app[*].printPing true
+param **.hostRouters[*].mobility.typename "\"MassMobility\""
+param **.hostRouters[*].mobility.initFromDisplayString false
+param **.basicHosts[*].mobility.typename "\"MassMobility\""
+param **.basicHosts[*].mobility.initFromDisplayString false
+param **.hostRouters[*].osgModel "\"3d/drone.ive.80.scale.0,0,90.rot\""
+param **.basicHosts[*].osgModel "\"3d/drone.ive.10.scale.0,0,90.rot\""
+param **.hostRouters[*].mobility.initialMovementHeading "uniform(0deg, 360deg)"
+param **.hostRouters[*].mobility.initialMovementElevation "uniform(-90deg, 90deg)"
+param **.hostRouters[*].mobility.rotationAxisAngle uniform(-10deg,10deg)
+param **.hostRouters[*].mobility.faceForward false
+param **.basicHosts[*].mobility.initialMovementHeading "uniform(0deg, 360deg)"
+param **.basicHosts[*].mobility.initialMovementElevation "uniform(-90deg, 90deg)"
+param **.basicHosts[*].mobility.rotationAxisAngle uniform(-10deg,10deg)
+param **.basicHosts[*].mobility.faceForward false
+param **.hostRouters[*].mobility.speed truncnormal(50mps,8mps)
+param **.hostRouters[*].mobility.changeInterval "truncnormal(2s, 1s)"
+param **.hostRouters[*].mobility.angleDelta "normal(-20deg, 20deg)"
+param **.basicHosts[*].mobility.speed "truncnormal(20mps, 4mps)"
+param **.basicHosts[*].mobility.changeInterval "truncnormal(3s, 1s)"
+param **.basicHosts[*].mobility.angleDelta "normal(-10deg, 10deg)"
+param **.basicHosts[*].mobility.initialZ 200m
+param **.basicHosts[*].mobility.constraintAreaMinZ 100m
+param **.basicHosts[*].mobility.constraintAreaMaxZ 300m
+param **.hostRouters[0].mobility.initialX 700m
+param **.hostRouters[0].mobility.initialY 1500m
+param **.hostRouters[1].mobility.initialX 1500m
+param **.hostRouters[1].mobility.initialY 500m
+param **.hostRouters[2].mobility.initialX 1500m
+param **.hostRouters[2].mobility.initialY 1200m
+param **.hostRouters[3].mobility.initialX 300m
+param **.hostRouters[3].mobility.initialY 600m
+param **.hostRouters[4].mobility.initialX 1000m
+param **.hostRouters[4].mobility.initialY 1000m
+param **.basicHosts[*].mobility.constraintAreaMinX 200m
+param **.basicHosts[*].mobility.constraintAreaMaxX 1800m
+param **.basicHosts[*].mobility.constraintAreaMinY 200m
+param **.basicHosts[*].mobility.constraintAreaMaxY 1800m
+param **.hostRouters[0].mobility.getOthersPosition true
+param **.hostRouters[0].mobility.basicNodeNum 30
+param **.hostRouters[0].mobility.routerNodeNum 5
+
+vector 0 UAVNetwork_Multi.basicHosts[0].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 1 UAVNetwork_Multi.basicHosts[1].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 2 UAVNetwork_Multi.basicHosts[2].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 3 UAVNetwork_Multi.basicHosts[3].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 4 UAVNetwork_Multi.basicHosts[4].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 5 UAVNetwork_Multi.basicHosts[5].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 6 UAVNetwork_Multi.basicHosts[6].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 7 UAVNetwork_Multi.basicHosts[7].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 8 UAVNetwork_Multi.basicHosts[8].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 9 UAVNetwork_Multi.basicHosts[9].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 10 UAVNetwork_Multi.basicHosts[10].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 11 UAVNetwork_Multi.basicHosts[11].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 12 UAVNetwork_Multi.basicHosts[12].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 13 UAVNetwork_Multi.basicHosts[13].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 14 UAVNetwork_Multi.basicHosts[14].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 15 UAVNetwork_Multi.basicHosts[15].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 16 UAVNetwork_Multi.basicHosts[16].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 17 UAVNetwork_Multi.basicHosts[17].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 18 UAVNetwork_Multi.basicHosts[18].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 19 UAVNetwork_Multi.basicHosts[19].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 20 UAVNetwork_Multi.basicHosts[20].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 21 UAVNetwork_Multi.basicHosts[21].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 22 UAVNetwork_Multi.basicHosts[22].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 23 UAVNetwork_Multi.basicHosts[23].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 24 UAVNetwork_Multi.basicHosts[24].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 25 UAVNetwork_Multi.basicHosts[25].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 26 UAVNetwork_Multi.basicHosts[26].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 27 UAVNetwork_Multi.basicHosts[27].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 28 UAVNetwork_Multi.basicHosts[28].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 29 UAVNetwork_Multi.basicHosts[29].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 30 UAVNetwork_Multi.hostRouters[0].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 31 UAVNetwork_Multi.hostRouters[1].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 32 UAVNetwork_Multi.hostRouters[2].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 33 UAVNetwork_Multi.hostRouters[3].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 34 UAVNetwork_Multi.hostRouters[4].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 35 UAVNetwork_Multi.basicHosts[0].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 36 UAVNetwork_Multi.basicHosts[1].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 37 UAVNetwork_Multi.basicHosts[2].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 38 UAVNetwork_Multi.basicHosts[3].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 39 UAVNetwork_Multi.basicHosts[4].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 40 UAVNetwork_Multi.basicHosts[5].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 41 UAVNetwork_Multi.basicHosts[6].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 42 UAVNetwork_Multi.basicHosts[7].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 43 UAVNetwork_Multi.basicHosts[8].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 44 UAVNetwork_Multi.basicHosts[9].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 45 UAVNetwork_Multi.basicHosts[10].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 46 UAVNetwork_Multi.basicHosts[11].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 47 UAVNetwork_Multi.basicHosts[12].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 48 UAVNetwork_Multi.basicHosts[13].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 49 UAVNetwork_Multi.basicHosts[14].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 50 UAVNetwork_Multi.basicHosts[15].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 51 UAVNetwork_Multi.basicHosts[16].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 52 UAVNetwork_Multi.basicHosts[17].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 53 UAVNetwork_Multi.basicHosts[18].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 54 UAVNetwork_Multi.basicHosts[19].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 55 UAVNetwork_Multi.basicHosts[20].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 56 UAVNetwork_Multi.basicHosts[21].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 57 UAVNetwork_Multi.basicHosts[22].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 58 UAVNetwork_Multi.basicHosts[23].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 59 UAVNetwork_Multi.basicHosts[24].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 60 UAVNetwork_Multi.basicHosts[25].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 61 UAVNetwork_Multi.basicHosts[26].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 62 UAVNetwork_Multi.basicHosts[27].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 63 UAVNetwork_Multi.basicHosts[28].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 64 UAVNetwork_Multi.basicHosts[29].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 65 UAVNetwork_Multi.hostRouters[0].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 66 UAVNetwork_Multi.hostRouters[1].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 67 UAVNetwork_Multi.hostRouters[2].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 68 UAVNetwork_Multi.hostRouters[3].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 69 UAVNetwork_Multi.hostRouters[4].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+0	21197 27 0 0 0 0 3 0 2 2 4
+1	21224 27 0 0 0 0 3 0 2 2 4
+2	21251 27 0 0 0 0 3 0 2 2 4
+3	21278 27 0 0 0 0 3 0 2 2 4
+4	21305 27 0 0 0 0 3 0 2 2 4
+5	21332 27 0 0 0 0 3 0 2 2 4
+6	21359 27 0 0 0 0 3 0 2 2 4
+7	21386 27 0 0 0 0 3 0 2 2 4
+8	21413 27 0 0 0 0 3 0 2 2 4
+9	21440 27 0 0 0 0 3 0 2 2 4
+10	21467 30 0 0 0 0 3 0 2 2 4
+11	21497 30 0 0 0 0 3 0 2 2 4
+12	21527 30 0 0 0 0 3 0 2 2 4
+13	21557 30 0 0 0 0 3 0 2 2 4
+14	21587 30 0 0 0 0 3 0 2 2 4
+15	21617 30 0 0 0 0 3 0 2 2 4
+16	21647 30 0 0 0 0 3 0 2 2 4
+17	21677 30 0 0 0 0 3 0 2 2 4
+18	21707 30 0 0 0 0 3 0 2 2 4
+19	21737 30 0 0 0 0 3 0 2 2 4
+20	21767 30 0 0 0 0 3 0 2 2 4
+21	21797 30 0 0 0 0 3 0 2 2 4
+22	21827 30 0 0 0 0 3 0 2 2 4
+23	21857 30 0 0 0 0 3 0 2 2 4
+24	21887 30 0 0 0 0 3 0 2 2 4
+25	21917 30 0 0 0 0 3 0 2 2 4
+26	21947 30 0 0 0 0 3 0 2 2 4
+27	21977 30 0 0 0 0 3 0 2 2 4
+28	22007 30 0 0 0 0 3 0 2 2 4
+29	22037 30 0 0 0 0 3 0 2 2 4
+30	22067 30 0 0 0 0 3 0 2 2 4
+31	22097 30 0 0 0 0 3 0 2 2 4
+32	22127 30 0 0 0 0 3 0 2 2 4
+33	22157 30 0 0 0 0 3 0 2 2 4
+34	22187 30 0 0 0 0 3 0 2 2 4
+35	22217 10 0 0 0 0 1 1 1 1 1
+36	22227 10 0 0 0 0 1 1 1 1 1
+37	22237 10 0 0 0 0 1 1 1 1 1
+38	22247 10 0 0 0 0 1 1 1 1 1
+39	22257 10 0 0 0 0 1 1 1 1 1
+40	22267 10 0 0 0 0 1 1 1 1 1
+41	22277 10 0 0 0 0 1 1 1 1 1
+42	22287 10 0 0 0 0 1 1 1 1 1
+43	22297 10 0 0 0 0 1 1 1 1 1
+44	22307 10 0 0 0 0 1 1 1 1 1
+45	22317 10 0 0 0 0 1 1 1 1 1
+46	22327 10 0 0 0 0 1 1 1 1 1
+47	22337 10 0 0 0 0 1 1 1 1 1
+48	22347 10 0 0 0 0 1 1 1 1 1
+49	22357 10 0 0 0 0 1 1 1 1 1
+50	22367 10 0 0 0 0 1 1 1 1 1
+51	22377 10 0 0 0 0 1 1 1 1 1
+52	22387 10 0 0 0 0 1 1 1 1 1
+53	22397 10 0 0 0 0 1 1 1 1 1
+54	22407 10 0 0 0 0 1 1 1 1 1
+55	22417 10 0 0 0 0 1 1 1 1 1
+56	22427 10 0 0 0 0 1 1 1 1 1
+57	22437 10 0 0 0 0 1 1 1 1 1
+58	22447 10 0 0 0 0 1 1 1 1 1
+59	22457 10 0 0 0 0 1 1 1 1 1
+60	22467 10 0 0 0 0 1 1 1 1 1
+61	22477 10 0 0 0 0 1 1 1 1 1
+62	22487 10 0 0 0 0 1 1 1 1 1
+63	22497 10 0 0 0 0 1 1 1 1 1
+64	22507 10 0 0 0 0 1 1 1 1 1
+65	22517 10 0 0 0 0 1 1 1 1 1
+66	22527 10 0 0 0 0 1 1 1 1 1
+67	22537 10 0 0 0 0 1 1 1 1 1
+68	22547 10 0 0 0 0 1 1 1 1 1
+69	22557 10 0 0 0 0 1 1 1 1 1
+

@@ -1,0 +1,46 @@
+../out/clang-release/src/inet/transportlayer/rtp/RtpInterfacePacket_m.o: \
+  D:/OMNeT++\omnetpp-5.6.2\include\omnetpp.h \
+  D:\OMNeT++\omnetpp-5.6.2\samples\inet4\src\inet\common\precompiled.h \
+  D:\OMNeT++\omnetpp-5.6.2\samples\inet4\src\inet\common\precompiled_release.h \
+  inet/transportlayer/rtp/RtpInterfacePacket_m.cc \
+  inet/transportlayer/rtp/RtpInterfacePacket_m.h \
+  inet/common/INETDefs_m.h inet/common/INETDefs.h \
+  inet/common/precompiled_release.h inet/common/precompiled.h \
+  inet/opp_defines.h inet/features.h inet/common/Compat.h \
+  inet/common/InitStages.h \
+  inet/networklayer/contract/ipv4/Ipv4Address_m.h \
+  inet/networklayer/contract/ipv4/Ipv4Address.h \
+  inet/transportlayer/rtp/RtpSenderControlMessage_m.h \
+  inet/transportlayer/rtp/RtpSenderStatusMessage_m.h
+
+D:\OMNeT++\omnetpp-5.6.2\samples\inet4\src\inet\common\precompiled.h:
+
+D:\OMNeT++\omnetpp-5.6.2\samples\inet4\src\inet\common\precompiled_release.h:
+
+inet/transportlayer/rtp/RtpInterfacePacket_m.cc:
+
+inet/transportlayer/rtp/RtpInterfacePacket_m.h:
+
+inet/common/INETDefs_m.h:
+
+inet/common/INETDefs.h:
+
+inet/common/precompiled_release.h:
+
+inet/common/precompiled.h:
+
+inet/opp_defines.h:
+
+inet/features.h:
+
+inet/common/Compat.h:
+
+inet/common/InitStages.h:
+
+inet/networklayer/contract/ipv4/Ipv4Address_m.h:
+
+inet/networklayer/contract/ipv4/Ipv4Address.h:
+
+inet/transportlayer/rtp/RtpSenderControlMessage_m.h:
+
+inet/transportlayer/rtp/RtpSenderStatusMessage_m.h:

@@ -1,0 +1,143 @@
+<config>
+   <interface hosts="UAVNetwork_Multi.basicHosts[0]" names="wlan0" address="10.0.0.1" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.basicHosts[1]" names="wlan0" address="10.0.0.2" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.basicHosts[2]" names="wlan0" address="10.0.0.3" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.basicHosts[3]" names="wlan0" address="10.0.0.4" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.basicHosts[4]" names="wlan0" address="10.0.0.5" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.basicHosts[5]" names="wlan0" address="10.0.0.6" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.basicHosts[6]" names="wlan0" address="10.0.0.7" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.basicHosts[7]" names="wlan0" address="10.0.0.8" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.basicHosts[8]" names="wlan0" address="10.0.0.9" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.basicHosts[9]" names="wlan0" address="10.0.0.10" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.basicHosts[10]" names="wlan0" address="10.0.0.11" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.basicHosts[11]" names="wlan0" address="10.0.0.12" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.basicHosts[12]" names="wlan0" address="10.0.0.13" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.basicHosts[13]" names="wlan0" address="10.0.0.14" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.basicHosts[14]" names="wlan0" address="10.0.0.15" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.basicHosts[15]" names="wlan0" address="10.0.0.16" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.basicHosts[16]" names="wlan0" address="10.0.0.17" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.basicHosts[17]" names="wlan0" address="10.0.0.18" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.basicHosts[18]" names="wlan0" address="10.0.0.19" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.basicHosts[19]" names="wlan0" address="10.0.0.20" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.basicHosts[20]" names="wlan0" address="10.0.0.21" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.basicHosts[21]" names="wlan0" address="10.0.0.22" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.basicHosts[22]" names="wlan0" address="10.0.0.23" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.basicHosts[23]" names="wlan0" address="10.0.0.24" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.basicHosts[24]" names="wlan0" address="10.0.0.25" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.basicHosts[25]" names="wlan0" address="10.0.0.26" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.basicHosts[26]" names="wlan0" address="10.0.0.27" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.basicHosts[27]" names="wlan0" address="10.0.0.28" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.basicHosts[28]" names="wlan0" address="10.0.0.29" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.basicHosts[29]" names="wlan0" address="10.0.0.30" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.hostRouters[0]" names="wlan0" address="10.0.0.31" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.hostRouters[1]" names="wlan0" address="10.0.0.32" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.hostRouters[2]" names="wlan0" address="10.0.0.33" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.hostRouters[3]" names="wlan0" address="10.0.0.34" netmask="255.255.255.192" metric="2000"/>
+   <interface hosts="UAVNetwork_Multi.hostRouters[4]" names="wlan0" address="10.0.0.35" netmask="255.255.255.192" metric="2000"/>
+   <multicast-group hosts="UAVNetwork_Multi.basicHosts[0]" interfaces="wlan0" address="224.0.0.1"/>
+   <multicast-group hosts="UAVNetwork_Multi.basicHosts[1]" interfaces="wlan0" address="224.0.0.1"/>
+   <multicast-group hosts="UAVNetwork_Multi.basicHosts[2]" interfaces="wlan0" address="224.0.0.1"/>
+   <multicast-group hosts="UAVNetwork_Multi.basicHosts[3]" interfaces="wlan0" address="224.0.0.1"/>
+   <multicast-group hosts="UAVNetwork_Multi.basicHosts[4]" interfaces="wlan0" address="224.0.0.1"/>
+   <multicast-group hosts="UAVNetwork_Multi.basicHosts[5]" interfaces="wlan0" address="224.0.0.1"/>
+   <multicast-group hosts="UAVNetwork_Multi.basicHosts[6]" interfaces="wlan0" address="224.0.0.1"/>
+   <multicast-group hosts="UAVNetwork_Multi.basicHosts[7]" interfaces="wlan0" address="224.0.0.1"/>
+   <multicast-group hosts="UAVNetwork_Multi.basicHosts[8]" interfaces="wlan0" address="224.0.0.1"/>
+   <multicast-group hosts="UAVNetwork_Multi.basicHosts[9]" interfaces="wlan0" address="224.0.0.1"/>
+   <multicast-group hosts="UAVNetwork_Multi.basicHosts[10]" interfaces="wlan0" address="224.0.0.1"/>
+   <multicast-group hosts="UAVNetwork_Multi.basicHosts[11]" interfaces="wlan0" address="224.0.0.1"/>
+   <multicast-group hosts="UAVNetwork_Multi.basicHosts[12]" interfaces="wlan0" address="224.0.0.1"/>
+   <multicast-group hosts="UAVNetwork_Multi.basicHosts[13]" interfaces="wlan0" address="224.0.0.1"/>
+   <multicast-group hosts="UAVNetwork_Multi.basicHosts[14]" interfaces="wlan0" address="224.0.0.1"/>
+   <multicast-group hosts="UAVNetwork_Multi.basicHosts[15]" interfaces="wlan0" address="224.0.0.1"/>
+   <multicast-group hosts="UAVNetwork_Multi.basicHosts[16]" interfaces="wlan0" address="224.0.0.1"/>
+   <multicast-group hosts="UAVNetwork_Multi.basicHosts[17]" interfaces="wlan0" address="224.0.0.1"/>
+   <multicast-group hosts="UAVNetwork_Multi.basicHosts[18]" interfaces="wlan0" address="224.0.0.1"/>
+   <multicast-group hosts="UAVNetwork_Multi.basicHosts[19]" interfaces="wlan0" address="224.0.0.1"/>
+   <multicast-group hosts="UAVNetwork_Multi.basicHosts[20]" interfaces="wlan0" address="224.0.0.1"/>
+   <multicast-group hosts="UAVNetwork_Multi.basicHosts[21]" interfaces="wlan0" address="224.0.0.1"/>
+   <multicast-group hosts="UAVNetwork_Multi.basicHosts[22]" interfaces="wlan0" address="224.0.0.1"/>
+   <multicast-group hosts="UAVNetwork_Multi.basicHosts[23]" interfaces="wlan0" address="224.0.0.1"/>
+   <multicast-group hosts="UAVNetwork_Multi.basicHosts[24]" interfaces="wlan0" address="224.0.0.1"/>
+   <multicast-group hosts="UAVNetwork_Multi.basicHosts[25]" interfaces="wlan0" address="224.0.0.1"/>
+   <multicast-group hosts="UAVNetwork_Multi.basicHosts[26]" interfaces="wlan0" address="224.0.0.1"/>
+   <multicast-group hosts="UAVNetwork_Multi.basicHosts[27]" interfaces="wlan0" address="224.0.0.1"/>
+   <multicast-group hosts="UAVNetwork_Multi.basicHosts[28]" interfaces="wlan0" address="224.0.0.1"/>
+   <multicast-group hosts="UAVNetwork_Multi.basicHosts[29]" interfaces="wlan0" address="224.0.0.1"/>
+   <multicast-group hosts="UAVNetwork_Multi.hostRouters[0]" interfaces="wlan0" address="224.0.0.1 224.0.0.2"/>
+   <multicast-group hosts="UAVNetwork_Multi.hostRouters[1]" interfaces="wlan0" address="224.0.0.1 224.0.0.2"/>
+   <multicast-group hosts="UAVNetwork_Multi.hostRouters[2]" interfaces="wlan0" address="224.0.0.1 224.0.0.2"/>
+   <multicast-group hosts="UAVNetwork_Multi.hostRouters[3]" interfaces="wlan0" address="224.0.0.1 224.0.0.2"/>
+   <multicast-group hosts="UAVNetwork_Multi.hostRouters[4]" interfaces="wlan0" address="224.0.0.1 224.0.0.2"/>
+   <wireless interfaces="UAVNetwork_Multi.basicHosts[0]%wlan0 UAVNetwork_Multi.basicHosts[1]%wlan0 UAVNetwork_Multi.basicHosts[2]%wlan0 UAVNetwork_Multi.basicHosts[3]%wlan0 UAVNetwork_Multi.basicHosts[4]%wlan0 UAVNetwork_Multi.basicHosts[5]%wlan0 UAVNetwork_Multi.basicHosts[6]%wlan0 UAVNetwork_Multi.basicHosts[7]%wlan0 UAVNetwork_Multi.basicHosts[8]%wlan0 UAVNetwork_Multi.basicHosts[9]%wlan0 UAVNetwork_Multi.basicHosts[10]%wlan0 UAVNetwork_Multi.basicHosts[11]%wlan0 UAVNetwork_Multi.basicHosts[12]%wlan0 UAVNetwork_Multi.basicHosts[13]%wlan0 UAVNetwork_Multi.basicHosts[14]%wlan0 UAVNetwork_Multi.basicHosts[15]%wlan0 UAVNetwork_Multi.basicHosts[16]%wlan0 UAVNetwork_Multi.basicHosts[17]%wlan0 UAVNetwork_Multi.basicHosts[18]%wlan0 UAVNetwork_Multi.basicHosts[19]%wlan0 UAVNetwork_Multi.basicHosts[20]%wlan0 UAVNetwork_Multi.basicHosts[21]%wlan0 UAVNetwork_Multi.basicHosts[22]%wlan0 UAVNetwork_Multi.basicHosts[23]%wlan0 UAVNetwork_Multi.basicHosts[24]%wlan0 UAVNetwork_Multi.basicHosts[25]%wlan0 UAVNetwork_Multi.basicHosts[26]%wlan0 UAVNetwork_Multi.basicHosts[27]%wlan0 UAVNetwork_Multi.basicHosts[28]%wlan0 UAVNetwork_Multi.basicHosts[29]%wlan0 UAVNetwork_Multi.hostRouters[0]%wlan0 UAVNetwork_Multi.hostRouters[1]%wlan0 UAVNetwork_Multi.hostRouters[2]%wlan0 UAVNetwork_Multi.hostRouters[3]%wlan0 UAVNetwork_Multi.hostRouters[4]%wlan0"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[0]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[0]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[1]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[1]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[2]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[2]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[3]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[3]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[4]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[4]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[5]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[5]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[6]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[6]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[7]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[7]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[8]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[8]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[9]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[9]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[10]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[10]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[11]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[11]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[12]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[12]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[13]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[13]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[14]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[14]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[15]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[15]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[16]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[16]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[17]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[17]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[18]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[18]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[19]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[19]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[20]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[20]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[21]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[21]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[22]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[22]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[23]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[23]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[24]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[24]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[25]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[25]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[26]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[26]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[27]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[27]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[28]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[28]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[29]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.basicHosts[29]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.hostRouters[0]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.hostRouters[0]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.hostRouters[1]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.hostRouters[1]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.hostRouters[2]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.hostRouters[2]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.hostRouters[3]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.hostRouters[3]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+   <route hosts="UAVNetwork_Multi.hostRouters[4]" destination="10.0.0.0" netmask="255.255.255.192" gateway="*" interface="wlan0" metric="2000"/>
+   <route hosts="UAVNetwork_Multi.hostRouters[4]" destination="127.0.0.0" netmask="255.0.0.0" gateway="*" interface="lo0" metric="1"/>
+</config>
