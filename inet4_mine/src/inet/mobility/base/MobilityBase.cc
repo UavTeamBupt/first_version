@@ -230,7 +230,7 @@ void MobilityBase::refreshDisplay() const
    char*routernode="Router";
    if(strstr((std::string(subjectModule->getFullName())).c_str(), basenode) != NULL)//只有普通节点才显示cluster的变化
    {
-       sprintf(buf, "cluster: %s ", clusterHead.c_str());
+       sprintf(buf, "cluster: %s ", this->getClusterHead().c_str());
        subjectModule->getDisplayString().setTagArg("t", 0, buf);//标签名称、索引、值
    }
 }
@@ -402,13 +402,13 @@ void MobilityBase::handleIfOutside(BorderPolicy policy, Coord& targetPosition, C
 void MobilityBase::setClusterHead(std::string info)
 {
     clusterHead=info;
-    cout<<"clusterHead:"<<clusterHead<<endl;
+    // cout<<"clusterHead:"<<clusterHead<<endl;
 }
 
-//std::string MobilityBase:::getClusterHead()
-//{
-//    return clusterHead;
-//}
+std::string MobilityBase::getClusterHead() const
+{
+    return clusterHead;
+}
 
 } // namespace inet
 

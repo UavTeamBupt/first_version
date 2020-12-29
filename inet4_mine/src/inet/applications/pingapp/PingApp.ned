@@ -77,6 +77,11 @@ simple PingApp like IApp
         @lifecycleSupport;
         double stopOperationExtraTime @unit(s) = default(-1s);    // extra time after lifecycle stop operation finished
         double stopOperationTimeout @unit(s) = default(2s);    // timeout value for lifecycle stop operation
+        
+        //TODO new add
+        bool allowPingCluster = default(false);//允许在正常ping和ping簇头之间按比例选一个
+        int choosePingClusterPercent = default(0);//min=1 很难选中簇头  max=99 非常容易选中簇头 special= 100 不会选中簇头
+        
         @signal[rtt](type=simtime_t);
         @signal[numLost](type=long);
         @signal[numOutOfOrderArrivals](type=long);

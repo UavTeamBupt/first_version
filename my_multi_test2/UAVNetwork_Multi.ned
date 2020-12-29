@@ -37,6 +37,7 @@ network UAVNetwork_Multi
     parameters:
         //每簇的UAV数目
         int numHosts = default(30);
+        int numRouters = default(5);
         string mediumType = default("Ieee80211ScalarRadioMedium");
         @display("bgb=2000,2000");//1610.5125,874.96497
     submodules:
@@ -57,7 +58,7 @@ network UAVNetwork_Multi
             parameters:
                 @display("p=500,500");
         }
-        hostRouters[5]: UAVRouter {
+        hostRouters[numRouters]: UAVRouter {
             parameters:
                 @display("p=800,200");
         }

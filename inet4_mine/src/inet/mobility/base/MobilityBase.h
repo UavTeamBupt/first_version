@@ -198,7 +198,7 @@ class INET_API MobilityBase : public cSimpleModule, public IMobility
 
     //TODO new add
     void setClusterHead(std::string info);
-//    std::string getClusterHead();
+    std::string getClusterHead() const;
 };
 
 } // namespace inet

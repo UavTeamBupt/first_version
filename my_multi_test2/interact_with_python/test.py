@@ -56,8 +56,8 @@ def write_to_json(res):
 if __name__ == '__main__':
     basic_node_position_path=r"..\basicNodePosition.json"
     router_node_position_path=r"..\routerNodePosition.json"
-    # while True:
-    all_path=[basic_node_position_path,router_node_position_path]
-    basic_dict,router_dict=read_json_file(all_path)
-    basic_cluster_dict=get_cluster(basic_dict,router_dict)
-    write_to_json(basic_cluster_dict)
+    while True:
+        all_path=[basic_node_position_path,router_node_position_path]
+        basic_dict,router_dict=read_json_file(all_path)
+        basic_cluster_dict=get_cluster(basic_dict,router_dict)
+        write_to_json(basic_cluster_dict)

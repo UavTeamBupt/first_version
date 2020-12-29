@@ -88,6 +88,10 @@ class INET_API PingApp : public ApplicationBase, public INetworkSocket::ICallbac
     long numPongs = 0;    // number of received Ping requests
     long numDuplicatedPongs = 0;    // number of duplicated Ping responses
 
+    //TODO new add
+    bool allowPingCluster=false;
+    int choosePingClusterPercent=0;
+
   protected:
     virtual void initialize(int stage) override;
     virtual int numInitStages() const override { return NUM_INIT_STAGES; }
@@ -114,6 +118,9 @@ class INET_API PingApp : public ApplicationBase, public INetworkSocket::ICallbac
     //INetworkSocket::ICallback:
     virtual void socketDataArrived(INetworkSocket *socket, Packet *packet) override;
     virtual void socketClosed(INetworkSocket *socket) override;
+
+    //TODO new add
+    virtual L3Address chooseClusterOrNormal(L3Address normalAddress);
   public:
     PingApp();
     virtual ~PingApp();

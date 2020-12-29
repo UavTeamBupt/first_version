@@ -39,6 +39,13 @@
 #include "inet/networklayer/contract/L3Socket.h"
 #include "inet/networklayer/contract/ipv4/Ipv4Socket.h"
 #include "inet/networklayer/contract/ipv6/Ipv6Socket.h"
+#include "inet/mobility/base/MobilityBase.h"
+
+#include <stdlib.h> 
+#include <time.h> 
+#define MAX 100 
+
+using namespace std;
 
 #ifdef WITH_IPv4
 #include "inet/networklayer/ipv4/Icmp.h"
@@ -111,6 +118,10 @@ void PingApp::initialize(int stage)
             throw cRuntimeError("Invalid startTime/stopTime parameters");
         printPing = par("printPing");
         continuous = par("continuous");
+        //TODO new add
+        allowPingCluster = par("allowPingCluster");
+        choosePingClusterPercent =par("choosePingClusterPercent");
+        choosePingClusterPercent = 101 - choosePingClusterPercent;//101-使得max min关系对应上
 
         const char *crcModeString = par("crcMode");
         if (!strcmp(crcModeString, "declared"))
@@ -147,17 +158,45 @@ void PingApp::parseDestAddressesPar()
 {
     srcAddr = L3AddressResolver().resolve(par("srcAddr"));
     const char *destAddrs = par("destAddr");
-    if (!strcmp(destAddrs, "*")) {
-        destAddresses = getAllAddresses();
+    if (!strcmp(destAddrs, "*")) {//如果地址�?* 就�?获取destAddr里所有地�? strcmp在相等时�?0
+        destAddresses = getAllAddresses();//不�?�?��* destAddr都�?�?��终解析为destAddresses!
     }
-    else {
+    else {//地址不是* 直接逐个获取添加
         cStringTokenizer tokenizer(destAddrs);
         const char *token;
 
-        while ((token = tokenizer.nextToken()) != nullptr) {
+        while ((token = tokenizer.nextToken()) != nullptr) {//const char* 类模块名�?
             L3Address addr = L3AddressResolver().resolve(token);
             destAddresses.push_back(addr);
         }
+    }
+}
+
+L3Address PingApp::chooseClusterOrNormal(L3Address normalAddress)
+{
+    std::string basic = this->getFullPath();//UAVNetwork_Multi.basicHosts[18].app[0]
+    string::size_type posiiton = basic.find("app");
+    basic.erase(posiiton);
+    std::string mobilityModulePath=basic+std::string("mobility");
+    cModule* mobilityModule = this->getModuleByPath(mobilityModulePath.c_str());
+    MobilityBase* MB= check_and_cast<MobilityBase*>(mobilityModule);
+    std::string clusterName=MB->getClusterHead();
+    cout<<"mapping cluster head:"<<clusterName<<endl;
+    if(clusterName=="_")
+    {
+        return normalAddress;
+    }
+    else
+    {
+        const char *clusterNameChar = clusterName.data();
+        L3Address clusterAddress = L3AddressResolver().resolve(clusterNameChar);
+        //目前获得2个L3Address 一个是normalAddress另一个是  clusterAddress
+        if(rand() % choosePingClusterPercent == 1)  //选中簇头！
+        {
+            return clusterAddress;
+        }
+        else
+            return normalAddress;
     }
 }
 
@@ -165,7 +204,7 @@ void PingApp::handleSelfMessage(cMessage *msg)
 {
     if (msg->getKind() == PING_FIRST_ADDR) {
         srcAddr = L3AddressResolver().resolve(par("srcAddr"));
-        parseDestAddressesPar();
+        parseDestAddressesPar();//获取destAddresses
         if (destAddresses.empty()) {
             return;
         }
@@ -176,8 +215,18 @@ void PingApp::handleSelfMessage(cMessage *msg)
     if (msg->getKind() == PING_CHANGE_ADDR) {
         if (destAddrIdx >= (int)destAddresses.size())
             return;
-        destAddr = destAddresses[destAddrIdx];
+        if (allowPingCluster==true)
+        {
+            destAddr = this->chooseClusterOrNormal(destAddresses[destAddrIdx]);//随机选择簇头或当前顺序节点
+        }
+        else
+        {
+            destAddr = destAddresses[destAddrIdx];
+        }
         EV_INFO << "Starting up: dest=" << destAddr << "  src=" << srcAddr << "seqNo=" << sendSeqNo << endl;
+        if(destAddr!=destAddresses[destAddrIdx])
+            cout<<"!!!!!!!";
+        cout << "Starting up: dest=" << destAddr << "  src=" << srcAddr << "seqNo=" << sendSeqNo << endl;
         ASSERT(!destAddr.isUnspecified());
         const Protocol *networkProtocol = nullptr;
         const char *networkProtocolAsString = par("networkProtocol");
@@ -214,16 +263,32 @@ void PingApp::handleSelfMessage(cMessage *msg)
 
     // send a ping
     sendPingRequest();
-
+    //TODO change 注意编号问题
     if (count > 0 && sendSeqNo % count == 0) {
-        // choose next dest address
-        destAddrIdx++;
         msg->setKind(PING_CHANGE_ADDR);
-        if (destAddrIdx >= (int)destAddresses.size()) {
-            if (continuous) {
-                destAddrIdx = destAddrIdx % destAddresses.size();
+        // choose next dest address
+        if(destAddr==destAddresses[destAddrIdx])//选中了普通节点而非簇头节点
+        {
+            destAddrIdx++;
+            if (destAddrIdx >= (int)destAddresses.size()) {
+                if (continuous) {
+                    destAddrIdx = destAddrIdx % destAddresses.size();//continues就从头开始了
+                }
             }
+            //输出部分
+//            if(this->getFullPath().find("basicHosts[0]"))//只输出basicHost[0]的下标统计
+//            {
+//                cout<<this->getFullPath()<<"choosed normal node,the destAddrIdx is:"<<destAddrIdx<<endl;
+//            }
         }
+//        else//输出部分
+//        {
+//            if(this->getFullPath().find("basicHosts[0]"))//只输出basicHost[0]的下标统计
+//            {
+//                cout<<this->getFullPath()<<"choosed cluster node,the cluster is:"<<destAddr<<endl;
+//            }
+//        }
+
     }
 
     // then schedule next one if needed
@@ -556,14 +621,14 @@ std::vector<L3Address> PingApp::getAllAddresses()
     for (int i = 0; i <= lastId; i++)
     {
         IInterfaceTable *ift = dynamic_cast<IInterfaceTable *>(getSimulation()->getModule(i));
-        if (ift) {
-            for (int j = 0; j < ift->getNumInterfaces(); j++) {
+        if (ift) {//该模块存�?
+            for (int j = 0; j < ift->getNumInterfaces(); j++) {//对�?模块的每�?��口进行遍�?
                 InterfaceEntry *ie = ift->getInterface(j);
                 if (ie && !ie->isLoopback()) {
 #ifdef WITH_IPv4
                     auto ipv4Data = ie->findProtocolData<Ipv4InterfaceData>();
                     if (ipv4Data != nullptr) {
-                        Ipv4Address address = ipv4Data->getIPAddress();
+                        Ipv4Address address = ipv4Data->getIPAddress();//获取ip地址
                         if (!address.isUnspecified())
                             result.push_back(L3Address(address));
                     }

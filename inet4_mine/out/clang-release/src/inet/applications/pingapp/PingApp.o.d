@@ -51,6 +51,13 @@
   inet/networklayer/contract/L3Socket.h \
   inet/networklayer/contract/ipv4/Ipv4Socket.h \
   inet/networklayer/contract/ipv6/Ipv6Socket.h \
+  inet/mobility/base/MobilityBase.h inet/common/StringFormat.h \
+  inet/common/geometry/common/CanvasProjection.h \
+  inet/common/geometry/common/RotationMatrix.h \
+  inet/common/geometry/common/Coord.h \
+  inet/common/geometry/common/EulerAngles.h \
+  inet/common/geometry/common/Quaternion.h \
+  inet/mobility/contract/IMobility.h json/json.h \
   inet/networklayer/ipv4/Icmp.h \
   inet/common/IProtocolRegistrationListener.h \
   inet/networklayer/ipv4/IIpv4RoutingTable.h \
@@ -205,6 +212,24 @@ inet/networklayer/contract/L3Socket.h:
 inet/networklayer/contract/ipv4/Ipv4Socket.h:
 
 inet/networklayer/contract/ipv6/Ipv6Socket.h:
+
+inet/mobility/base/MobilityBase.h:
+
+inet/common/StringFormat.h:
+
+inet/common/geometry/common/CanvasProjection.h:
+
+inet/common/geometry/common/RotationMatrix.h:
+
+inet/common/geometry/common/Coord.h:
+
+inet/common/geometry/common/EulerAngles.h:
+
+inet/common/geometry/common/Quaternion.h:
+
+inet/mobility/contract/IMobility.h:
+
+json/json.h:
 
 inet/networklayer/ipv4/Icmp.h:
 
