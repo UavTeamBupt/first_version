@@ -174,7 +174,7 @@ void PingApp::parseDestAddressesPar()
 
 L3Address PingApp::chooseClusterOrNormal(L3Address normalAddress)
 {
-    std::string basic = this->getFullPath();//UAVNetwork_Multi.basicHosts[18].app[0]
+    std::string basic = this->getFullPath();//
     string::size_type posiiton = basic.find("app");
     basic.erase(posiiton);
     std::string mobilityModulePath=basic+std::string("mobility");
@@ -218,6 +218,10 @@ void PingApp::handleSelfMessage(cMessage *msg)
         if (allowPingCluster==true)
         {
             destAddr = this->chooseClusterOrNormal(destAddresses[destAddrIdx]);//随机选择簇头或当前顺序节点
+            if (destAddr.getType()==L3Address::NONE){
+                cout<<"?????????NULL???"<<endl;
+                destAddr = destAddresses[destAddrIdx];
+            }
         }
         else
         {

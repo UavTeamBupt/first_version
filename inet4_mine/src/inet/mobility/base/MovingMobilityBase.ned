@@ -29,6 +29,7 @@ simple MovingMobilityBase extends MobilityBase
         bool getOthersPosition = default(false);
         int basicNodeNum = default(0);
         int routerNodeNum = default(0);
-        double getAllNodeStatusInterval @unit(s) = default(2s);//多久才收集一次全部节点信息(目前仅位置信息)
+        double getAllNodeStatusInterval @unit(s) = default(0.01s);//多久才收集一次全部节点信息(目前仅位置信息) 2s
+        string networkName= default("UAVNetwork_Multi");
 }
 

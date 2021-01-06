@@ -52,7 +52,8 @@ MovingMobilityBase::MovingMobilityBase() :
     basicNodeNum(0),
     routerNodeNum(0),
     getAllNodeStatusInterval(5),
-    nextGetAllNodeStatusTime(-1)
+    nextGetAllNodeStatusTime(-1),
+    networkName("UAVNetwork_Multi")
 {
 }
 
@@ -83,6 +84,7 @@ void MovingMobilityBase::initialize(int stage)
         basicNodeNum = par("basicNodeNum");
         routerNodeNum = par ("routerNodeNum");
         getAllNodeStatusInterval = par("getAllNodeStatusInterval");
+        networkName= par("networkName");
     }
     //TODO new add
     if (getOthersPosition==true){
@@ -108,7 +110,8 @@ void MovingMobilityBase::updateOtherNodesPosition()
     for(int i =0;i<basicNodeNum;i++)
     {
         //注意当前的inet仅仅适用于我现在这个工程了!
-        std::string nodePathName = std::string("UAVNetwork_Multi.basicHosts[")+std::to_string(i)+std::string("].mobility");
+//        std::string nodePathName = std::string("UAVNetwork_Multi.basicHosts[")+std::to_string(i)+std::string("].mobility");
+        std::string nodePathName = networkName+std::string(".basicHosts[")+std::to_string(i)+std::string("].mobility");
         cModule* nodeModule = this->getModuleByPath(nodePathName.c_str());
 //        cout<<"is the nodeModule nullptr?"<<nodeModule<<endl;
         //MassMobility*转化为MovingMobilityBase(也就是本类)
@@ -119,7 +122,8 @@ void MovingMobilityBase::updateOtherNodesPosition()
     //簇头node的map
     for(int i =0;i<routerNodeNum;i++)
     {
-        std::string nodePathName = std::string("UAVNetwork_Multi.hostRouters[")+std::to_string(i)+std::string("].mobility");
+//        std::string nodePathName = std::string("UAVNetwork_Multi.hostRouters[")+std::to_string(i)+std::string("].mobility");
+        std::string nodePathName = networkName+std::string(".hostRouters[")+std::to_string(i)+std::string("].mobility");
         cModule* nodeModule = this->getModuleByPath(nodePathName.c_str());
         MovingMobilityBase* MMB= check_and_cast<MovingMobilityBase*>(nodeModule);
         routerNodePositionMap[std::string("hostRouters[")+std::to_string(i)+std::string("]")]=MMB->getCurrentPosition();
@@ -178,10 +182,11 @@ void MovingMobilityBase::setBasicNodeCluster()
             //遍历 所有交换机
             for(std::map<std::string,Coord>::iterator i = basicNodePositionMap.begin();i != basicNodePositionMap.end();i++){
                 //只搞basicHosts的
-                std::string nodePathName = std::string("UAVNetwork_Multi.")+std::string(i->first)+std::string(".mobility");
+//                std::string nodePathName = std::string("UAVNetwork_Multi.")+std::string(i->first)+std::string(".mobility");
+                std::string nodePathName = networkName+std::string(".")+std::string(i->first)+std::string(".mobility");
                 cModule* nodeModule = this->getModuleByPath(nodePathName.c_str());
                 MobilityBase* MB= check_and_cast<MobilityBase*>(nodeModule);
-                MB->setClusterHead(root[i->first].asString());
+                MB->setClusterHead(root[i->first].asString());//把第i个node对应的簇头设置进去(即root[i->first])
             }
         }               
         break;

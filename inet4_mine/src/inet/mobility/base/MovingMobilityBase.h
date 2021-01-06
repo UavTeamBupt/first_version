@@ -88,6 +88,7 @@ class INET_API MovingMobilityBase : public MobilityBase
     simtime_t nextGetAllNodeStatusTime;
     const char* basicNodeFile = "./basicNodePosition.json";
     const char* routerNodeFile = "./routerNodePosition.json";
+    const char* networkName = "UAVNetwork_Multi";
     // Json::Value testroot;//Json正文部分，用于组装
     // Json::StyledWriter jsonwriter;//用于写入Json文件
     // std::ofstream jsonos;
